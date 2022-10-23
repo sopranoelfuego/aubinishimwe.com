@@ -1,30 +1,33 @@
-import '../styles/globals.css'
+// import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import {createTheme,ThemeProvider} from "@mui/material"
-import { useState } from 'react'
-import { Header } from '@components'
-
-const theme=createTheme({ 
-  palette:{
-    primary:{
-      main:"#0a192f"
-    },
-    secondary:{
-      main:"#fff"
-    }
-  }
-})
+import { createTheme, PaletteMode, ThemeProvider } from '@mui/material'
+import { createContext, useMemo, useState } from 'react'
+import { getDesignTokens } from '@utils'
+export const ColorModeContext = createContext({ toggleColorMode: () => {} })
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [lightMode, setLightMode] = useState(false)
-  const changeThemeMode=()=>setLightMode(prev=>!prev)
-  return (
-    <ThemeProvider theme={theme}>
-      <Header lightMode={lightMode} changeThemeMode={changeThemeMode}/>
-      <Component {...pageProps} />
-    </ThemeProvider>
-  )
-  
+ const [mode, setMode] = useState<'light' | 'dark'>('dark')
+ const colorMode = useMemo(
+  () => ({
+   // The dark mode switch would invoke this method
+   toggleColorMode: () => {
+    setMode((prevMode: PaletteMode) =>
+     prevMode === 'light' ? 'dark' : 'light'
+    )
+   },
+  }),
+  []
+ )
+ // Update the theme only if the mode changes
+ const theme = useMemo(() => createTheme(getDesignTokens(mode)), [mode])
+
+ return (
+  <ColorModeContext.Provider value={colorMode}>
+   <ThemeProvider theme={theme}>
+    <Component {...pageProps} />
+   </ThemeProvider>
+  </ColorModeContext.Provider>
+ )
 }
 
 export default MyApp

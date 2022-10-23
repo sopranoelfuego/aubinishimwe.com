@@ -1,15 +1,19 @@
-import React from 'react'
-import { IconButton, List, ListItem,  Stack,  styled } from '@mui/material'
-import { MdDarkMode, MdOutlineDarkMode } from 'react-icons/md'
+import React, { useContext } from 'react'
+import { Container, IconButton, List, ListItem,  Stack,  styled, useTheme } from '@mui/material'
+import { BsBrightnessHigh, BsBrightnessHighFill } from 'react-icons/bs'
 import Link from 'next/link'
 import { Box } from '@mui/system'
-export function Header({ lightMode, changeThemeMode }) {
+import { ColorModeContext } from '@pages/_app'
+export function Header() {
+
+  const  colorMode = useContext(ColorModeContext)
  const navLists = [
   { number: '01',href:"/about", name: 'About' },
   { number: '02',href:"/projects", name: 'projects' },
   { number: '03',href:"/work", name: 'Work' },
   { number: '04',href:"/contact", name: 'Contact' },
  ]
+ const theme=useTheme()
  const CustomHeaderContainer = styled('header')(({ theme }) => ({
   display: 'flex',
   maxWidth: '1200px',
@@ -17,9 +21,11 @@ export function Header({ lightMode, changeThemeMode }) {
   justifyContent: 'space-between',
   alignItems: 'center',
   height: '100px',
-  backgroundColor:lightMode? theme.palette?.secondary.main:theme.palette.primary.main,
+  backgroundColor:theme.palette.primary.main,
  }))
  return (
+  <Container maxWidth="lg">
+
   <CustomHeaderContainer>
    <Link as="a" href="#">
     <h1>logo</h1>
@@ -29,8 +35,8 @@ export function Header({ lightMode, changeThemeMode }) {
     sx={{ width: 'auto', display: 'flex',  bgcolor: 'inherit' }}
    >
     <ListItem disableGutters>
-      <IconButton onClick={changeThemeMode} >
-      {lightMode?<MdDarkMode fontSize="40px"  />:<MdOutlineDarkMode fontSize="40px" color='white'/>}
+      <IconButton onClick={colorMode.toggleColorMode} >
+      {theme?.palette.mode ? <BsBrightnessHighFill fontSize="40px" color="white"  />:<BsBrightnessHigh fontSize="40px" color='black'/>}
       </IconButton>
     </ListItem>
     {navLists?.map((value, key) => (
@@ -49,5 +55,6 @@ export function Header({ lightMode, changeThemeMode }) {
    </List>
    
   </CustomHeaderContainer>
+  </Container>
  )
 }
