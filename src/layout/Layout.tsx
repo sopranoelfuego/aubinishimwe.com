@@ -1,43 +1,41 @@
 import { Header } from '@components'
-import { Grid, Typography } from '@mui/material'
+import { Box,  styled,  Typography, useTheme } from '@mui/material'
 import { Stack } from '@mui/system'
-import {FiGithub} from "react-icons/fi"
-import {AiFillLinkedin, AiOutlineInstagram,AiOutlineTwitter} from "react-icons/ai"
+
 import React from 'react'
-import Link from 'next/link'
+import { afterLine } from '@utils'
+import SocialMedias from './SocialMedias'
+
 
 export const Layout: React.FC = ({ children }: any) => {
+  const theme=useTheme()
+  const AfterLine=afterLine({width:"1px",height:"200px"})
+  const CustomLink=styled('a')(({ theme})=>({
+    display: 'flex',
+    flexDirection:'column',
+    transition:"transform  400ms ease-in",
+    '&:hover':{
+      transform:'translateY(-3px)',
+      color: `${theme?.palette?.primary?.contrastText}`,
+    }
+    
+  }))
  return (
   <>
+   <Box sx={{ width:"100%",maxWidth:"1400px",position:"relative",bgcolor:`${theme?.palette?.background?.default}`,color:`${theme?.palette.text?.secondary}`,overflowY:"auto",transition:"all 300ms ease-in",padding:"0 50px"}}>
    <Header />
-   <Grid container spacing={2}>
-    <Grid item xs={2}>
-     <Stack>
-      <FiGithub/>
-     </Stack>
-     <Stack>
-      <AiOutlineInstagram/>
-     </Stack>
-     <Stack>
-      <AiOutlineTwitter/>
-     </Stack>
-     <Stack>
-      <AiFillLinkedin/>
-     </Stack>
-    </Grid>
-    <Grid item xs={8}>
+   <Box sx={{display:"flex",width:"100%"}}>
+    <SocialMedias/>
      {children}
-    </Grid>
-    <Grid item xs={2}>
-      <Stack>
-        <Typography>
-          <Link as="a" href="mailto:aubinjaja@gmail.com">aubinjaja@gmail.com</Link>
+      <Stack direction="column" sx={{position:"fixed", display:"flex",flexDirection:"column",gap:"20px",alignItems:'center',bottom:0,right:50}}>
+        <Typography variant="caption" fontWeight="bold"  letterSpacing={2} sx={{writingMode:"vertical-lr"}}>
+          <CustomLink  href="mailto:aubinjaja@gmail.com">aubinjaja@gmail.com</CustomLink>
         </Typography>
+        <AfterLine/>
       </Stack>
-    </Grid>
-   </Grid>
+   </Box>
 
-   {children}
+   </Box>
   </>
  )
 }

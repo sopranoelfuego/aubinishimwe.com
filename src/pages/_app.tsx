@@ -1,9 +1,9 @@
-// import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { createTheme, PaletteMode, ThemeProvider } from '@mui/material'
 import { createContext, useMemo, useState } from 'react'
 import { getDesignTokens } from '@utils'
 export const ColorModeContext = createContext({ toggleColorMode: () => {} })
+import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
  const [mode, setMode] = useState<'light' | 'dark'>('dark')

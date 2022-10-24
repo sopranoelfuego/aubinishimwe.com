@@ -1,4 +1,7 @@
+import { HeroPage } from '@components'
+import { Header } from '@components'
 import {HomePage} from '@components'
+import { Layout } from '@layout'
 import Head from 'next/head'
 const Home = () => {
   return (

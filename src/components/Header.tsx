@@ -4,6 +4,8 @@ import { BsBrightnessHigh, BsBrightnessHighFill } from 'react-icons/bs'
 import Link from 'next/link'
 import { Box } from '@mui/system'
 import { ColorModeContext } from '@pages/_app'
+import { GLobalButton } from '@utils/Button'
+import { LinkAnchor } from '@utils'
 export function Header() {
 
   const  colorMode = useContext(ColorModeContext)
@@ -16,45 +18,49 @@ export function Header() {
  const theme=useTheme()
  const CustomHeaderContainer = styled('header')(({ theme }) => ({
   display: 'flex',
-  maxWidth: '1200px',
   width: '100%',
   justifyContent: 'space-between',
   alignItems: 'center',
   height: '100px',
-  backgroundColor:theme.palette.primary.main,
+  backgroundColor:"inherit",
  }))
  return (
-  <Container maxWidth="lg">
+
 
   <CustomHeaderContainer>
    <Link as="a" href="#">
-    <h1>logo</h1>
+    <h1>A</h1>
    </Link>
 
    <List
-    sx={{ width: 'auto', display: 'flex',  bgcolor: 'inherit' }}
+    sx={{ width: 'auto', display: 'flex',  bgcolor: 'inherit',fontSize:"13px",gap:"10px",letterSpacing:"1px" }}
    >
     <ListItem disableGutters>
       <IconButton onClick={colorMode.toggleColorMode} >
-      {theme?.palette.mode ? <BsBrightnessHighFill fontSize="40px" color="white"  />:<BsBrightnessHigh fontSize="40px" color='black'/>}
+      {theme?.palette?.mode ? <BsBrightnessHighFill fontSize="26px"/>:<BsBrightnessHigh fontSize="26px" />}
       </IconButton>
     </ListItem>
     {navLists?.map((value, key) => (
-     <ListItem key={key} disableGutters>
+     <ListItem key={key} disableGutters >
       <Link as="a" href={value?.href}>
-        <Stack direction="row">
-          <Box>{value?.number}</Box>
-          <Box>{value?.name}</Box>
+        <Stack direction="row" alignItems="center"  >
+          <LinkAnchor>
+          <Box sx={{color:`${theme?.palette?.primary?.contrastText}`}}>{value?.number}.</Box>
+          <Box >{value?.name}</Box>
+          </LinkAnchor>
         </Stack>
       </Link>
      </ListItem>
     ))}
     <ListItem disableGutters>
-     <button>Resume</button>
+      <GLobalButton>
+      Resume
+      </GLobalButton>
+     
     </ListItem>
    </List>
    
   </CustomHeaderContainer>
-  </Container>
+  
  )
 }
