@@ -14,7 +14,7 @@ export function Header() {
   
   const  colorMode = useContext(ColorModeContext)
  const navLists = [
-  { number: '01',href:"/about", name: 'About',delay:"0ms" },
+  { number: '01',href:"#aboutMe", name: 'About',delay:"0ms" },
   { number: '02',href:"/projects", name: 'projects',delay:"200ms" },
   { number: '03',href:"/work", name: 'Work',delay:"400ms" },
   { number: '04',href:"/contact", name: 'Contact',delay:"600ms" },
@@ -39,7 +39,7 @@ export function Header() {
 
 
   <CustomHeaderContainer>
-   <Link as="a" href="#">
+   <Link as="a" href="#/">
     <h1>A</h1>
    </Link>
 

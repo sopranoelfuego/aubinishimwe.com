@@ -9,13 +9,3 @@ export const LinkAnchor = styled('a')(({ theme }) => ({
   cursor: 'pointer',
  },
 }))
-
-export const AfterLine = ({ width, height }) => {
- const Line = styled('div')(({ theme }) => ({
-  width: width,
-  height: height,
-  display: 'block',
-  backgroundColor: `${theme?.palette.text?.secondary}`,
- }))
- return Line
-}
