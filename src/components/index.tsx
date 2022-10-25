@@ -1,3 +1,3 @@
 export * from './Header'
-export * from './HeroPage'
-export * from "./HomePage"
+export * from './Hero'
+export * from "./AboutMe"

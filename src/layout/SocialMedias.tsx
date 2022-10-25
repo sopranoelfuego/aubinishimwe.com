@@ -11,7 +11,7 @@ function SocialMedias() {
     const StackDiv=styled('div')(({ theme})=>({
       display: 'flex',
       flexDirection:'column',
-      transition:"transform  400ms ease-in",
+      transition:"all  300ms ease-in",
       '&:hover':{
         transform:'translateY(-3px)',
         color: `${theme?.palette?.primary?.contrastText}`,

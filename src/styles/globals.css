@@ -47,12 +47,12 @@ body {
   --pink: #f57dff;
   --blue: #57cbff;
   --green-light: #0ad42b;
-  --font-sans: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
-  --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+  --font-sans: monospace,"Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+  --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono";
   --fz-xxs: 12px;
   --fz-xs: 13px;
   --fz-sm: 14px;
-  --fz-md: 16px;
+  --fz-md: 16px;   
   --fz-lg: 18px;
   --fz-xl: 20px;
   --fz-xxl: 22px;
@@ -75,12 +75,3 @@ body{
   background-color: var(--Navy);
 }
 
-a {
- color: var(--Green);
- text-decoration: none;
- transition:all 300ms ease-in
-}
-a:hover {
-  color: var(--Green);
-
-}
