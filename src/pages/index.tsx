@@ -1,6 +1,7 @@
 import { Header } from '@components'
 import { Hero } from '@components'
 import AboutMe from '@components/AboutMe'
+import ContactMe from '@components/ContactMe'
 import { Layout } from '@layout'
 import { Box, useTheme } from '@mui/material'
 import Head from 'next/head'
@@ -19,6 +20,7 @@ const Home = () => {
    <Layout>
     <Hero />
     <AboutMe/>
+    <ContactMe/>
    </Layout>
    </Box>
   </>

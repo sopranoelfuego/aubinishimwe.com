@@ -27,8 +27,8 @@ function SocialMedias() {
   return (
     <Stack direction="column" alignItems="center" spacing={3} sx={{position:"fixed",bottom:0}}>
     {socialsMedia?.map((value,key)=>(
-      <Tooltip title={value?.name} >
-        <StackDiv key={key}>
+      <Tooltip key={key} title={value?.name} >
+        <StackDiv >
          {value?.icon}
         </StackDiv>
       </Tooltip>

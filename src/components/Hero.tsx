@@ -7,7 +7,7 @@ export function Hero() {
   const theme=useTheme()
   return (
     
-    <Box id="/" sx={{height:"100vh",justifyContent:"flex-start", alignItems:"flex-start", display:"flex",gap:"10px",flexDirection:"column",width:"inherit",padding:"0 50px 0 150px"}}>
+    <Box id="/" sx={{minHeight:"100vh",justifyContent:"flex-start", alignItems:"flex-start", display:"flex",gap:"10px",flexDirection:"column",width:"inherit",padding:"0 150px"}}>
       <Typography  fontSize="15px" display="flex" fontWeight="100px"  textTransform="capitalize"   color={`${theme?.palette?.primary?.contrastText}`}>
        Hi, My name is
       </Typography>

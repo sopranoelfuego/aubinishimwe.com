@@ -13,13 +13,19 @@ export function Header() {
   }, [])
   
   const  colorMode = useContext(ColorModeContext)
- const navLists = [
-  { number: '01',href:"#aboutMe", name: 'About',delay:"0ms" },
-  { number: '02',href:"/projects", name: 'projects',delay:"200ms" },
-  { number: '03',href:"/work", name: 'Work',delay:"400ms" },
-  { number: '04',href:"/contact", name: 'Contact',delay:"600ms" },
+ const navListItems = [
+  { number: '01',href:"/#aboutMe", name: 'About',delay:"0ms" },
+  { number: '02',href:"/#projects", name: 'Projects',delay:"200ms" },
+  { number: '03',href:"/#contact", name: 'Contact',delay:"600ms" },
+  { number: '04',href:"/#blog", name: 'Blog',delay:"400ms" },
  ]
  const theme=useTheme()
+ const NavList=styled(List)(({ theme})=>({
+  width: 'auto', display: 'flex', fontSize:"13px",gap:"20px",letterSpacing:"1px",
+  "& @media (minWidth: 1000px)": {
+    color:"red"
+  }
+ }))
  const CustomHeaderContainer = styled('header')(({ theme }) => ({
   display: 'flex',
   width: '100%',
@@ -27,6 +33,7 @@ export function Header() {
   alignItems: 'center',
   height: '100px',
   fontFamily:"monospace",
+  boxShadow:`0 10px 30px -10px ${theme?.palette?.background?.default}`,
   zIndex: 20,
   color:`${theme?.palette.text?.secondary}`,
   backgroundColor:theme?.palette?.mode==="dark"?"rgba(10, 25, 47, 0.85)":"rgba(255, 255, 255, 0.85)",
@@ -39,19 +46,17 @@ export function Header() {
 
 
   <CustomHeaderContainer>
-   <Link as="a" href="#/">
+   <Link as="a" href="#/" >
     <h1>A</h1>
    </Link>
 
-   <List
-    sx={{ width: 'auto', display: 'flex', fontSize:"13px",gap:"20px",letterSpacing:"1px" }}
-   >
+   <NavList>
     <ListItem disableGutters>
       <IconButton onClick={colorMode.toggleColorMode} >
       {theme?.palette?.mode ? <BsBrightnessHighFill fontSize="26px"/>:<BsBrightnessHigh fontSize="26px" />}
       </IconButton>
     </ListItem>
-    {navLists?.map((value, key) => (
+    {navListItems?.map((value, key) => (
      <ListItem key={key} disableGutters sx={{transition:"all 300ms ease-in",transitionDelay:`${value?.delay}`,visibility:`${visibility}`}}>
       <Link as="a" href={value?.href}>
         <Stack direction="row" alignItems="center"   >
@@ -69,7 +74,7 @@ export function Header() {
       </GLobalButton>
      
     </ListItem>
-   </List>
+   </NavList>
    
   </CustomHeaderContainer>
   

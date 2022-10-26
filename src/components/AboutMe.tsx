@@ -18,9 +18,9 @@ function AboutMe() {
   
     
   return (
-    <Box sx={{padding:" 0 150px"}} id="aboutMe">
+    <Box sx={{minHeight:"100vh",padding:" 0 150px"}} id="aboutMe">
         <ComponentTitle number="01." nameTitle="About me"/>
-    <Box sx={{width:"100%",marginTop:"50px"}}>
+    <Box sx={{width:"100%"}}>
      <Grid container spacing={4}>
      <Grid item xs={12} md={6} sx={{display:"flex",flexDirection:"column",gap:"20px"}}>
         <Typography>
@@ -49,7 +49,7 @@ function AboutMe() {
      </Grid>
      <Grid item xs={12} md={6} position="relative" >
         <ImageContainer>
-            <Image src="/aubin.jpeg" width={300}  height={300} />
+            <Image src="/aubin.jpeg" width={300}  height={300} alt="aubin" />
         </ImageContainer>
      </Grid>
      </Grid>
