@@ -8,5 +8,5 @@ export const GLobalButton = styled('button')(({ theme }) => ({
  color: `${theme?.palette?.primary?.contrastText}`,
  backgroundColor: 'transparent',
  marginLeft: '10px',
- '&:hover': { backgroundColor: 'rgba(10, 212, 43,0.2)' },
+ '&:hover': { backgroundColor: 'rgba(10, 212, 43,0.1)' },
 }))

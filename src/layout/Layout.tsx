@@ -1,7 +1,5 @@
-import { Header } from '@components'
 import { Box,  styled,  Typography, useTheme } from '@mui/material'
 import { Stack } from '@mui/system'
-
 import React from 'react'
 import { afterLine } from '@utils'
 import SocialMedias from './SocialMedias'
