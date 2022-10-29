@@ -13,7 +13,7 @@ import ComponentTitle from '@utils/ComponentTitle'
 import { ImLocation2 } from 'react-icons/im'
 import { BsWhatsapp } from 'react-icons/bs'
 import { SiGmail } from 'react-icons/si'
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 
 const socialContact = [
  { name: 'bujumbura,burundi', icon: <ImLocation2 /> },
@@ -22,9 +22,6 @@ const socialContact = [
 ]
 function ContactMe() {
  const theme = useTheme()
-//  const [name, setName] = useState(null)
-// const [email, setEmail] = useState(null)
-// const [suggestion, setSuggestion] = useState(null)
 const name=useRef<HTMLInputElement>(null)
 const email=useRef<HTMLInputElement>(null)
 const suggestion=useRef<HTMLInputElement>(null)
@@ -42,9 +39,6 @@ const suggestion=useRef<HTMLInputElement>(null)
 
  }))
  const handlerSubmit=()=>{
-   console.log("name:",name?.current?.value)
-   console.log("email:",email?.current?.value)
-   console.log("suggestion:",suggestion?.current?.value)
     fetch('/api/contact',{
     method:"POST",
     headers: {
@@ -65,6 +59,7 @@ const suggestion=useRef<HTMLInputElement>(null)
     padding: ' 100px 150px',
     bgcolor: `${theme?.palette.background.paper}`,
    }}
+   id="contact"
   >
    <ComponentTitle number="03." nameTitle="Contact me" />
 
