@@ -32,6 +32,9 @@ yarn-error.log*
 
 # vercel
 .vercel
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e78606f46375cff610263f3c048d998f452033af

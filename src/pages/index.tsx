@@ -1,4 +1,3 @@
-import {lazy} from "react"
 import { Header } from '@components'
 import { Box, useTheme } from '@mui/material'
 import Head from 'next/head'
