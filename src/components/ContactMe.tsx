@@ -13,7 +13,7 @@ import ComponentTitle from '@utils/ComponentTitle'
 import { ImLocation2 } from 'react-icons/im'
 import { BsWhatsapp } from 'react-icons/bs'
 import { SiGmail } from 'react-icons/si'
-import React from 'react'
+import React, { useRef, useState } from 'react'
 
 const socialContact = [
  { name: 'bujumbura,burundi', icon: <ImLocation2 /> },
@@ -22,7 +22,12 @@ const socialContact = [
 ]
 function ContactMe() {
  const theme = useTheme()
-
+//  const [name, setName] = useState(null)
+// const [email, setEmail] = useState(null)
+// const [suggestion, setSuggestion] = useState(null)
+const name=useRef<HTMLInputElement>(null)
+const email=useRef<HTMLInputElement>(null)
+const suggestion=useRef<HTMLInputElement>(null)
  const SendButton=styled('button')(({theme})=>({
     width: '100%',
     padding:"15px 20px",
@@ -36,6 +41,24 @@ function ContactMe() {
 
 
  }))
+ const handlerSubmit=()=>{
+   console.log("name:",name?.current?.value)
+   console.log("email:",email?.current?.value)
+   console.log("suggestion:",suggestion?.current?.value)
+    fetch('/api/contact',{
+    method:"POST",
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body:JSON.stringify({name:name?.current?.value,email:email?.current?.value,suggestion:suggestion?.current?.value})
+   }).then((response) => response.json())
+   .then((data) => {
+     console.log('Success:', data);
+   })
+   .catch((error) => {
+     console.error('Error:', error);
+   });
+ }
  return (
   <Box
    sx={{
@@ -66,6 +89,8 @@ function ContactMe() {
        id="outlined-textarea"
        label="Your Name"
        fullWidth
+       inputRef={name}
+       type="text"
       size='small'
        sx={{
         border: `1px solid ${theme?.palette.text?.secondary}`,
@@ -79,6 +104,7 @@ function ContactMe() {
       label="Multiline Placeholder"
       size='small'
       type="email"
+      inputRef={email}
       sx={{
        border: `1px solid ${theme?.palette.text?.secondary}`,
        borderRadius: '4px',
@@ -89,6 +115,7 @@ function ContactMe() {
      <TextField
       id="outlined-textarea"
       rows={4}
+      inputRef={suggestion}
       sx={{
        border: `1px solid ${theme?.palette.text?.secondary}`,
        borderRadius: '4px',
@@ -97,7 +124,7 @@ function ContactMe() {
       multiline
       fullWidth
      />
-     <SendButton >
+     <SendButton onClick={handlerSubmit}>
           send
      </SendButton>
     </Grid>
