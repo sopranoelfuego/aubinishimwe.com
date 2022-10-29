@@ -3,6 +3,7 @@ import { Stack } from '@mui/system'
 import React from 'react'
 import { afterLine } from '@utils'
 import SocialMedias from './SocialMedias'
+import Footer from '@components/Footer'
 
 
 export const Layout: React.FC = ({ children }: any) => {
@@ -27,6 +28,7 @@ export const Layout: React.FC = ({ children }: any) => {
     <Box>
 
      {children}
+     <Footer/>
     </Box>
       <Stack direction="column" sx={{position:"fixed", display:"flex",flexDirection:"column",gap:"20px",alignItems:'center',bottom:0,right:50}}>
         <Typography variant="caption" fontWeight="bold"  letterSpacing={2} sx={{writingMode:"vertical-lr"}}>
