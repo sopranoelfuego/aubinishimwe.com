@@ -1,0 +1,75 @@
+import {
+ Box,
+ Button,
+ Card,
+ CardActions,
+ CardContent,
+ CardMedia,
+ Grid,
+ IconButton,
+ Paper,
+ Typography,
+ useTheme,
+} from '@mui/material'
+import React from 'react'
+import { FiExternalLink, FiGithub } from 'react-icons/fi'
+
+function SingleProject({ project }) {
+ const theme = useTheme()
+ return (
+  <Grid item xs={12} md={4} sx={{ maxWidth: 345,
+    transition:"transform 300ms ease-in",
+    "&:hover":{
+      transform: 'translateY(-5px)'
+    }
+   }}>
+   <Card sx={{ width: '100%','&:hover > img':{
+  filter: "none",
+    // border
+  } }}>
+    <CardMedia
+     component="img"
+     alt="green iguana"
+     height="250"
+     image={project?.image}
+     sx={{objectFit:"cover",flexGrow:1}}
+
+    />
+    <CardContent>
+     <Typography gutterBottom variant="h5" component="div">
+      {project?.name}
+     </Typography>
+     <Typography variant="body2" color="text.secondary">
+      Lizards are a widespread group of squamate reptiles, with over 6,000
+      species, ranging across all continents except Antarctica
+     </Typography>
+     <Box
+      sx={{
+       width: '100%',
+       display: 'flex',
+       justifyContent: 'flex-end',
+       fontSize: '10px',
+       fontFamily: 'monospace',
+       opacity: '0.70',
+       padding: '10px',
+      }}
+     >
+      {project?.stack}
+     </Box>
+    </CardContent>
+    <CardActions
+     sx={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}
+    >
+     <IconButton size="small">
+      <FiGithub />
+     </IconButton>
+     <IconButton size="small">
+      <FiExternalLink />
+     </IconButton>
+    </CardActions>
+   </Card>
+  </Grid>
+ )
+}
+
+export default SingleProject

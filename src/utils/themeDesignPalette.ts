@@ -14,7 +14,7 @@ export const getDesignTokens = (mode: PaletteMode) => ({
       },
       divider: '#bec0c2',
       text: {
-       primary: 'inherit',
+       primary: '#fff',
        secondary: '#020202',
       },
       background: {
