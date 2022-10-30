@@ -1,13 +1,11 @@
 import {
  Box,
- Button,
  Card,
  CardActions,
  CardContent,
  CardMedia,
  Grid,
  IconButton,
- Paper,
  Typography,
  useTheme,
 } from '@mui/material'
@@ -19,13 +17,16 @@ function SingleProject({ project }) {
  return (
   <Grid item xs={12} md={4} sx={{ maxWidth: 345,
     transition:"transform 300ms ease-in",
+    boxShadow: `0 10px 20px -10px ${theme?.palette?.background?.default}`,
     "&:hover":{
       transform: 'translateY(-5px)'
+    },
+    "&:hover  h5":{
+        color: `${theme?.palette?.primary?.contrastText}`
     }
    }}>
    <Card sx={{ width: '100%','&:hover > img':{
   filter: "none",
-    // border
   } }}>
     <CardMedia
      component="img"
@@ -36,7 +37,7 @@ function SingleProject({ project }) {
 
     />
     <CardContent>
-     <Typography gutterBottom variant="h5" component="div">
+     <Typography gutterBottom variant="h5"  sx={{color:`${theme?.palette?.text?.primary}`,transition:"all  300ms ease-in"}}>
       {project?.name}
      </Typography>
      <Typography variant="body2" color="text.secondary">

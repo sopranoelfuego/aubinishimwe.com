@@ -21,16 +21,16 @@ export const Layout: React.FC = ({ children }: any) => {
   }))
  return (
   <>
-   <Box sx={{ width:"100%",maxWidth:"1400px",position:"relative",color:`${theme?.palette.text?.secondary}`,overflowY:"auto",transition:"all 300ms ease-in",padding:"0 50px"}}>
+   <Box sx={{ width:"100%",maxWidth:"1400px",position:"relative",color:`${theme?.palette.text?.secondary}`,overflowY:"auto",transition:"all 300ms ease-in",padding:{xs:"0 10px",sm:"0 50px",md:'0 50px'}}}>
    
    <Box sx={{display:"flex",width:"100%"}}>
     <SocialMedias/>
-    <Box>
+    <Box flexGrow={1} >
 
      {children}
      <Footer/>
     </Box>
-      <Stack direction="column" sx={{position:"fixed", display:"flex",flexDirection:"column",gap:"20px",alignItems:'center',bottom:0,right:50}}>
+      <Stack direction="column" sx={{position:"fixed", display:{xs:"none",sm:"flex",md:"flex"},flexDirection:"column",gap:"20px",alignItems:'center',bottom:0,right:50}}>
         <Typography variant="caption" fontWeight="bold"  letterSpacing={2} sx={{writingMode:"vertical-lr"}}>
           <CustomLink  href="mailto:aubinjaja@gmail.com">aubinjaja@gmail.com</CustomLink>
         </Typography>

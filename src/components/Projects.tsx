@@ -5,8 +5,8 @@ import SingleProject from './SingleProject'
 
 function Projects() {
     const projects=[
-        {name:"ultConnect",description:"",image:"/projects/ultConnect.png",gitRepos:"",stack:"React material-Ui Mongodb Firebase(auth)"},
-        {name:"education website",description:"",image:"/projects/education.png",gitRepos:"",stack:"Javascript html css"},
+        {name:"Ult-Connect",description:"",image:"/projects/ultConnect.png",gitRepos:"",stack:"React material-Ui Mongodb Firebase(auth)"},
+        {name:"Education website",description:"",image:"/projects/education.png",gitRepos:"",stack:"Javascript html css"},
     ]
   return (
     <Box id="#projects" sx={{ minHeight: '100vh', width:"100%", padding: ' 0 150px' }}>
