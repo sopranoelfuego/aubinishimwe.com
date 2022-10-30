@@ -17,6 +17,7 @@ function SingleProject({ project }) {
  return (
   <Grid item xs={12} md={4} sx={{ maxWidth: 345,
     transition:"transform 300ms ease-in",
+    width: '100%',
     boxShadow: `0 10px 20px -10px ${theme?.palette?.background?.default}`,
     "&:hover":{
       transform: 'translateY(-5px)'

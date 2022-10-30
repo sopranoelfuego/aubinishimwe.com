@@ -37,7 +37,7 @@ export function Header() {
    sx={{
     position: 'sticky',
     top: 0,
-    width: '100%',
+    width: '100vw',
     height: '100px',
     fontFamily: 'monospace',
     boxShadow: `0 10px 30px -10px ${theme?.palette?.background?.default}`,

@@ -8,16 +8,17 @@ export function Hero() {
   <Box
    id="/"
    sx={{
-    minHeight: '100vh',
+    minHeight: {xm:"auto",md:'100vh'},
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
     textJustify:"justify",
     display: 'flex',
     lineHeight:1,
+    width:"100vw",
     gap: '10px',
     flexDirection: 'column',
-    width: 'inherit',
-    padding: {xs:"20px",sm:"0 90px",md:'0 150px'},
+    marging:0,
+    padding: {xs:"20px 0",sm:"0 90px",md:'0 150px'},
    }}
   >
    <Typography
@@ -40,9 +41,9 @@ export function Hero() {
    </Typography>
   
    <Typography variant="h2" component="h2" fontWeight="600" fontSize="clamp(30px, 8vw, 80px)" >
-    Web3 is my passionate.
+    Web3 is my passion.
    </Typography>
-   <Typography variant="body1" maxWidth="450px" letterSpacing="1px">
+   <Typography variant="body1" maxWidth="450px" letterSpacing="1px" sx={{width: '100%'}}>
     I’m a software engineer specializing in building (and occasionally
     designing) exceptional digital experiences. Currently, I’m focused on
     building accessible, human-centered products at{' '}

@@ -25,29 +25,27 @@ function AboutMe() {
  ]
 
  return (
-  <Box sx={{ minHeight: '100vh', padding: ' 0 150px' }} id="aboutMe">
+    
+    <Box sx={{ minHeight: '100vh',width:"100vw", padding: {xs:"20px",sm:"0 90px",md:'0 150px'} }} id="aboutMe">
    <ComponentTitle number="01." nameTitle="About me" />
    <Box sx={{ width: '100%' }}>
-    <Grid container spacing={4}>
+    <Grid container spacing={4} columns={{ xs: 1, sm: 8, md: 12 }}>
      <Grid
       item
       xs={12}
+      maxWidth="400px"
       md={6}
-      sx={{ display: 'flex', flexDirection: 'column', gap: '20px' }}
+      
+      sx={{ display: 'flex', flexDirection: 'column', gap: '20px',textJustify:"justify" }}
      >
-      <Typography>
+      <Typography  >
        Hello! My name is Aubin and I enjoy creating things that live on the
        internet. My interest in web development started back in 2012 when I
        decided to try editing custom Tumblr themes — turns out hacking together
        a custom reblog button taught me a lot about HTML & CSS!
       </Typography>
-      <Typography>
-       Hello! My name is Aubin and I enjoy creating things that live on the
-       internet. My interest in web development started back in 2012 when I
-       decided to try editing custom Tumblr themes — turns out hacking together
-       a custom reblog button taught me a lot about HTML & CSS!
-      </Typography>
-      <Box>
+
+      <Box sx={{width: '100%'}}>
        <Typography>
         Here are a few technologies I’ve been working with recently:
        </Typography>

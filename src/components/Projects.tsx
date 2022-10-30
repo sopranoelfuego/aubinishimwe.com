@@ -9,7 +9,7 @@ function Projects() {
         {name:"Education website",description:"",image:"/projects/education.png",gitRepos:"",stack:"Javascript html css"},
     ]
   return (
-    <Box id="#projects" sx={{ minHeight: '100vh', width:"100%", padding: ' 0 150px' }}>
+    <Box id="#projects" sx={{ minHeight: '100vh', width:"100vw", padding: {xs:"0 10px",sm:"0 50px",md:' 0 150px'} }}>
         
         <ComponentTitle number="02." nameTitle="Projects"/>
       <Grid container spacing={2} >

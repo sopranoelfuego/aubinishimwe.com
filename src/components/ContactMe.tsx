@@ -56,8 +56,9 @@ const suggestion=useRef<HTMLInputElement>(null)
  return (
   <Box
    sx={{
-    padding: ' 100px 150px',
+    padding: {xs:"0 10px",sm:"0 50px",md:' 0 150px'},
     bgcolor: `${theme?.palette.background.paper}`,
+    width:"100vw"
    }}
    id="contact"
   >
