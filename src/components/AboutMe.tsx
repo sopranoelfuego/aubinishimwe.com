@@ -9,14 +9,11 @@ import {
  useTheme,
 } from '@mui/material'
 import ComponentTitle from '@utils/ComponentTitle'
-import React, { useEffect } from 'react'
+import React from 'react'
 
 function AboutMe() {
  const theme = useTheme()
  const matches=useMediaQuery(theme.breakpoints.down('sm'))
- useEffect(() => {
-  console.log("matches changes:",matches)
- }, [matches])
  
  const techList = [
   { key: '1', name: 'typescript' },
@@ -37,7 +34,7 @@ function AboutMe() {
     display: matches?"none":'inline-block',
     width: '100%',
     height: '100%',
-    maxWidth:"400px",
+    maxWidth:"300px",
     zIndex:18,
     transform: "translate(5px,5px)",
     border: `2px solid ${theme?.palette?.primary?.contrastText}`,
@@ -70,27 +67,24 @@ function AboutMe() {
      spacing={2}
       sx={{textJustify:"justify",flex:1 }}
      >
-      <Typography  >
+      <Typography  fontFamily="monospace">
        Hello! My name is Aubin and I enjoy creating things that live on the
-       internet. My interest in web development started back in 2012 when I
-       decided to try editing custom Tumblr themes — turns out hacking together
-       a custom reblog button taught me a lot about HTML & CSS!
+       internet. My interest in coding stuffs started back in 2015 by watching my childhood movie <Typography display="inline-flex" fontWeight="700" color={`${theme?.palette?.primary?.contrastText}`}>The matrix</Typography>  i was amazed by the way auto-calculations was displayed on Terminals ,so i decided  to google some stuff related to the etichal hacking and coding.
       </Typography>
-      <Typography  >
-       Hello! My name is Aubin and I enjoy creating things that live on the
-       internet. My interest in web development started back in 2012 when I
-       decided to try editing custom Tumblr themes — turns out hacking together
-       a custom reblog button taught me a lot about HTML & CSS!
+      <Typography fontFamily="monospace" width="100%" >
+       So i decided to catch the basics(HTML,CSS,JAVASCRIPT) and attend coding communities events, now i got a bachelor degree in software Engineer 
       </Typography>
 
       <Box >
-       <Typography>
+       <Typography fontFamily="monospace">
         Here are a few technologies I’ve been working with recently:
        </Typography>
 
        <List
+       
         style={{
          display: 'grid',
+         fontFamily:"monospace",
          gridTemplateColumns: '1fr 1fr',
          fontSize: '13px',
          marginTop: '10px',
@@ -119,7 +113,7 @@ function AboutMe() {
      </Stack>
      <Box sx={{position:"relative",width:"100%",flex:1,padding:{xs:"0 0 30px 0",sm:"0 0 0 80px"}}}>
       <ImageContainer >
-       <img src="/aubin.jpeg" style={{width:"100%",height:"100%",borderRadius:"5px",zIndex:20,maxWidth:"400px"}} alt="aubin" />
+       <img src="/aubin.jpeg" style={{width:"100%",height:"100%",borderRadius:"5px",zIndex:20,maxWidth:"300px"}} alt="aubin" />
       </ImageContainer>
      </Box>
     </Box>
