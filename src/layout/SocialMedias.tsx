@@ -24,7 +24,7 @@ function SocialMedias() {
       {id:"4",href:"https://www.linkedin.com/in/aubin-ishimwe-308a7a206",name:"linkedin",icon:<AiFillLinkedin/>},
     ]
   return (
-    <Stack direction="column" alignItems="center" spacing={3} sx={{position:"fixed",bottom:0,display:{xs:"none",sm:"block",md:"flex",}}}>
+    <Stack direction="column" alignItems="center" spacing={3} sx={{position:"fixed",bottom:0,left:50,display:{xs:"none",sm:"block",md:"flex",}}}>
     {socialsMedia?.map((value,key)=>(
       <Tooltip key={key} title={value?.name} >
         <StackDiv >

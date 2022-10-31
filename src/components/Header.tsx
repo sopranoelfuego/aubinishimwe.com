@@ -35,10 +35,10 @@ export function Header() {
  return (
   <Box
    sx={{
-    position: 'sticky',
+    position: 'fixed',
     top: 0,
     width: '100vw',
-    height: '100px',
+    height: {xs:"60px",sm:'100px'},
     fontFamily: 'monospace',
     boxShadow: `0 10px 30px -10px ${theme?.palette?.background?.default}`,
     zIndex: 20,

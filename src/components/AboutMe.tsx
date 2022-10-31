@@ -1,18 +1,23 @@
 import {
  Box,
- Grid,
  List,
  ListItem,
+ Stack,
  styled,
  Typography,
+ useMediaQuery,
  useTheme,
 } from '@mui/material'
 import ComponentTitle from '@utils/ComponentTitle'
-import Image from 'next/image'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 function AboutMe() {
  const theme = useTheme()
+ const matches=useMediaQuery(theme.breakpoints.down('sm'))
+ useEffect(() => {
+  console.log("matches changes:",matches)
+ }, [matches])
+ 
  const techList = [
   { key: '1', name: 'typescript' },
   { key: '2', name: 'JavaScript (ES6+)' },
@@ -23,20 +28,47 @@ function AboutMe() {
   { key: '7', name: 'Docker' },
   { key: '8', name: 'Mysql and MongoDb databases' },
  ]
+ const ImageContainer = styled('div')(({ theme }) => ({
+   position: 'relative',
+   display: 'block',
+   margin:"0 auto",
+   '&::before': {
+    content: '""',
+    display: matches?"none":'inline-block',
+    width: '100%',
+    height: '100%',
+    maxWidth:"400px",
+    zIndex:18,
+    transform: "translate(5px,5px)",
+    border: `2px solid ${theme?.palette?.primary?.contrastText}`,
+    opacity:"0.8",
+    transition: 'transform 300ms ease-in',
+    borderRadius: '5px',
+    position: 'absolute',
+   },
+   '& > img':{
+      transform:"translate(-5px,-5px)",
+     filter:matches?"none":"inherit"
+   },
+   '&:hover  img': {
+      transform: "none",
+    filter: 'none',
+   },
+   '&:hover:before': {
+    transform: "none",
+    cursor: 'pointer',
+   },
+  }))
 
  return (
     
-    <Box sx={{ minHeight: '100vh',width:"100vw", padding: {xs:"20px",sm:"0 90px",md:'0 150px'} }} id="aboutMe">
+    <Box sx={{ minHeight: '100vh',width:"100%",margin:"0 auto",
+    maxWidth:"1000px",padding: { xs:"60px 0",sm:"none"} }} id="aboutMe">
    <ComponentTitle number="01." nameTitle="About me" />
-   <Box sx={{ width: '100%' }}>
-    <Grid container spacing={4} columns={{ xs: 1, sm: 8, md: 12 }}>
-     <Grid
-      item
-      xs={12}
-      maxWidth="400px"
-      md={6}
-      
-      sx={{ display: 'flex', flexDirection: 'column', gap: '20px',textJustify:"justify" }}
+    <Box sx={{width:"100%",display:"flex",alignItems:"flex-start",flexDirection:{xs:"column-reverse",sm:"row"},justifyContent:"space-evenly"}} >
+     <Stack direction="column"
+     spacing={2}
+      sx={{textJustify:"justify",flex:1 }}
      >
       <Typography  >
        Hello! My name is Aubin and I enjoy creating things that live on the
@@ -44,8 +76,14 @@ function AboutMe() {
        decided to try editing custom Tumblr themes — turns out hacking together
        a custom reblog button taught me a lot about HTML & CSS!
       </Typography>
+      <Typography  >
+       Hello! My name is Aubin and I enjoy creating things that live on the
+       internet. My interest in web development started back in 2012 when I
+       decided to try editing custom Tumblr themes — turns out hacking together
+       a custom reblog button taught me a lot about HTML & CSS!
+      </Typography>
 
-      <Box sx={{width: '100%'}}>
+      <Box >
        <Typography>
         Here are a few technologies I’ve been working with recently:
        </Typography>
@@ -78,41 +116,17 @@ function AboutMe() {
         ))}
        </List>
       </Box>
-     </Grid>
-     <Grid item xs={12} md={6} position="relative">
-      <ImageContainer>
-       <Image src="/aubin.jpeg" width={300} height={300} alt="aubin" />
+     </Stack>
+     <Box sx={{position:"relative",width:"100%",flex:1,padding:{xs:"0 0 30px 0",sm:"0 0 0 80px"}}}>
+      <ImageContainer >
+       <img src="/aubin.jpeg" style={{width:"100%",height:"100%",borderRadius:"5px",zIndex:20,maxWidth:"400px"}} alt="aubin" />
       </ImageContainer>
-     </Grid>
-    </Grid>
-   </Box>
+     </Box>
+    </Box>
+
   </Box>
  )
 }
 
-const ImageContainer = styled('div')(({ theme }) => ({
- position: 'relative',
- display: 'block',
- '&::before': {
-  content: '"hello friday"',
-  display: 'inline-block',
-  width: '300px',
-  height: '300px',
-  transform: 'translate(15px,15px)',
-  border: '2px solid #0ad42b',
-  transition: 'transform 300ms ease-in',
-  borderRadius: '5px',
-  position: 'absolute',
- },
- '&:hover  img': {
-  filter: 'none',
- },
- '&:hover:before': {
-  transform: 'translate(10px,10px)',
-  cursor: 'pointer',
- },
- '& > img': {
-  filter: 'grayscale(80%)',
- },
-}))
+
 export default AboutMe

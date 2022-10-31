@@ -10,10 +10,11 @@ function Projects() {
 
     ]
   return (
-    <Box id="#projects" sx={{ minHeight: '100vh', width:"100vw", padding: {xs:"0 10px",sm:"0 50px",md:' 0 150px'} }}>
+    <Box id="#projects" sx={{ minHeight: '100vh', width:"100%", margin:"0 auto",padding: { xs:"60px 0",sm:"none"},
+    maxWidth:"1000px", }}>
         
         <ComponentTitle number="02." nameTitle="Projects"/>
-      <Grid container spacing={2} >
+      <Grid container spacing={2} justifyContent="center" >
         {projects?.map((value, key)=><SingleProject key={key} project={value}/>)}
       </Grid>
     </Box>

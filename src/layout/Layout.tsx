@@ -21,11 +21,11 @@ export const Layout: React.FC = ({ children }: any) => {
   }))
  return (
   <>
-   <Box sx={{ width:"100%",maxWidth:"1400px",position:"relative",color:`${theme?.palette.text?.secondary}`,overflowY:"auto",transition:"all 300ms ease-in",padding:{xs:"0 10px",sm:"0 50px",md:'0 50px'}}}>
+   <Box sx={{ width:"100vw",margin:"0 auto",maxWidth:"2400px",padding: {xs:"20px",sm:"0 90px",md:'0 150px'},position:"relative",color:`${theme?.palette.text?.secondary}`,overflowY:"auto",transition:"all 300ms ease-in"}}>
    
-   <Box sx={{display:"flex",width:"100%"}}>
+   <Box sx={{width:"100%"}}>
     <SocialMedias/>
-    <Box flexGrow={1} >
+    <Box flexGrow={1} sx={{width:"100%",display:"flex",flexDirection:"column",justifyContent:"center"}}>
 
      {children}
      <Footer/>

@@ -22,6 +22,7 @@ function SingleProject({ project }) {
     "&:hover":{
       transform: 'translateY(-5px)'
     },
+
     "&:hover  h5":{
         color: `${theme?.palette?.primary?.contrastText}`
     }
@@ -34,7 +35,7 @@ function SingleProject({ project }) {
      alt="green iguana"
      height="250"
      image={project?.image}
-     sx={{objectFit:"cover",flexGrow:1}}
+     sx={{objectFit:"cover",flexGrow:1,filter:{xs:"none",md:"inherit"}}}
 
     />
     <CardContent>

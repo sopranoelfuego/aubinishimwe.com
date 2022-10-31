@@ -1,6 +1,8 @@
+import React, { useRef } from 'react'
 import {
  Box,
  Grid,
+ IconButton,
  List,
  ListItem,
  styled,
@@ -10,10 +12,12 @@ import {
 } from '@mui/material'
 import { Stack } from '@mui/system'
 import ComponentTitle from '@utils/ComponentTitle'
+import { AiFillLinkedin, AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai'
+import { FiGithub } from 'react-icons/fi'
+
 import { ImLocation2 } from 'react-icons/im'
 import { BsWhatsapp } from 'react-icons/bs'
 import { SiGmail } from 'react-icons/si'
-import React, { useRef } from 'react'
 
 const socialContact = [
  { name: 'bujumbura,burundi', icon: <ImLocation2 /> },
@@ -25,6 +29,12 @@ function ContactMe() {
 const name=useRef<HTMLInputElement>(null)
 const email=useRef<HTMLInputElement>(null)
 const suggestion=useRef<HTMLInputElement>(null)
+const socialsMedia=[
+  {id:"1",href:"https://github.com/sopranoelfuego",name:"github",icon:<FiGithub/>},
+  {id:"2",href:"https://www.instagram.com/ishimwe.aubin/",name:"instagram",icon:<AiOutlineInstagram/>},
+  {id:"3",href:"https://twitter.com/aubin.ishimwe",name:"twiiter",icon:<AiOutlineTwitter/>},
+  {id:"4",href:"https://www.linkedin.com/in/aubin-ishimwe-308a7a206",name:"linkedin",icon:<AiFillLinkedin/>},
+]
  const SendButton=styled('button')(({theme})=>({
     width: '100%',
     padding:"15px 20px",
@@ -56,9 +66,11 @@ const suggestion=useRef<HTMLInputElement>(null)
  return (
   <Box
    sx={{
-    padding: {xs:"0 10px",sm:"0 50px",md:' 0 150px'},
     bgcolor: `${theme?.palette.background.paper}`,
-    width:"100vw"
+    width:"100%", 
+    margin:"0 auto",
+    maxWidth:"1000px",
+    padding: { xs:"60px 0",sm:"none"}
    }}
    id="contact"
   >
@@ -157,6 +169,14 @@ const suggestion=useRef<HTMLInputElement>(null)
           {value?.icon} <Box>{value?.name}</Box>
          </ListItem>
         ))}
+        <ListItem sx={{display:{ xs:"inline-flex",sm:"none",marginTop:"30px"}}}>
+        <Stack direction="row" spacing={2}>
+          {socialsMedia.map((value,index)=><IconButton key={index} size="small" sx={{borderRadius:"50%",border:`1px solid  ${theme?.palette?.text?.primary}`}} >
+            {value?.icon}
+          </IconButton>)}
+          </Stack> 
+        </ListItem>
+    
        </List>
       </Box>
      </Stack>
