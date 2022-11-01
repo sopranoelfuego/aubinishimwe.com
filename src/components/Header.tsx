@@ -114,6 +114,7 @@ export function Header() {
           },
          }}
         >
+            <Link href={`${value?.href}`} passHref>
           <Stack direction="row" alignItems="center">
            <Typography
             variant="caption"
@@ -121,12 +122,11 @@ export function Header() {
            >
             {value?.number}.
            </Typography>
-         <Link href={`${value?.href}`} passHref>
            <Typography variant="caption" display="inline-flex">
             {value?.name}
             </Typography>
-         </Link>
           </Stack>
+         </Link>
         </Box>
        </ListItem>
       ))}
