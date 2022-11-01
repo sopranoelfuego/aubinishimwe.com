@@ -22,6 +22,7 @@ import { FiGithub } from 'react-icons/fi'
 import { ImLocation2 } from 'react-icons/im'
 import { BsWhatsapp } from 'react-icons/bs'
 import { SiGmail } from 'react-icons/si'
+import Image from 'next/image'
 
 const socialContact = [
  { name: 'bujumbura,burundi', icon: <ImLocation2 /> },
@@ -174,10 +175,11 @@ function ContactMe() {
        alignItems: 'center',
       }}
      >
-      <img
+      <Image
        src="/contact.svg"
        alt="pp"
-       style={{ width: '100%', maxWidth: '250px', maxHeight: '250px' }}
+       width={250}
+       height={250}
       />
       <Box
        sx={{
