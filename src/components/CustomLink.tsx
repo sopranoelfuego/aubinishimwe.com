@@ -18,6 +18,7 @@ const Link: FC<LinkProps & HTMLProps<HTMLAnchorElement>> = ({
    if (destination) destination.scrollIntoView({ behavior: 'smooth' })
   }
  }
+
  return (
   <NextLink
    as={as}
