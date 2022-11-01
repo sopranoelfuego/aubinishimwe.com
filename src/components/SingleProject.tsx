@@ -3,12 +3,12 @@ import {
  Card,
  CardActions,
  CardContent,
- CardMedia,
  Grid,
  IconButton,
  Typography,
  useTheme,
 } from '@mui/material'
+import Image from 'next/image'
 import React from 'react'
 import { FiExternalLink, FiGithub } from 'react-icons/fi'
 
@@ -21,7 +21,7 @@ function SingleProject({ project }) {
    md={6}
    lg={4}
    sx={{
-    maxWidth: 345,
+    maxWidth: 350,
     transition: 'transform 300ms ease-in',
     width: '100%',
     boxShadow: `0 10px 20px -10px ${theme?.palette?.background?.default}`,
@@ -42,16 +42,13 @@ function SingleProject({ project }) {
      },
     }}
    >
-    <CardMedia
-     component="img"
+    <Image
      alt="green iguana"
      height="250"
-     image={project?.image}
-     sx={{
-      objectFit: 'cover',
-      flexGrow: 1,
-      filter: { xs: 'none', md: 'inherit' },
-     }}
+     width="350"
+     objectFit='cover'
+     src={project?.image}
+     
     />
     <CardContent>
      <Typography
