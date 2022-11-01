@@ -21,6 +21,10 @@ const Home = () => {
       href: 'logo.png',
      },
     ]}
+    languageAlternates={[{
+      hrefLang: 'de-AT',
+      href: 'https://www.canonical.ie/de',
+    }]}
     twitter={{
      handle: '@aubinishimwe2',
      site: '@aubinishimwe2',

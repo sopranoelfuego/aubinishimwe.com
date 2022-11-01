@@ -66,7 +66,7 @@ export function Hero() {
      Bluetec
     </Link>
    </Typography>
-   <GLobalButton sx={{ marginTop: '20px' }}>Check my resume</GLobalButton>
+   <GLobalButton sx={{ marginTop: '20px' }} name="resume">Check my resume</GLobalButton>
   </Box>
  )
 }

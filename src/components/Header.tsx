@@ -89,7 +89,7 @@ export function Header() {
       }}
      >
       <ListItem disableGutters>
-       <IconButton onClick={colorMode.toggleColorMode}>
+       <IconButton onClick={colorMode.toggleColorMode} name="theme_button_toggle">
         {theme?.palette?.mode ? (
          <BsBrightnessHighFill fontSize="26px" />
         ) : (
@@ -141,7 +141,7 @@ export function Header() {
      </List>
 
      <Box sx={{ display: { xs: 'inline-block', md: 'none' } }}>
-      <IconButton onClick={handleDisplayMenu} name="menu-button">
+      <IconButton onClick={handleDisplayMenu} name="menu_button">
        <BiMenuAltRight />
       </IconButton>
      </Box>

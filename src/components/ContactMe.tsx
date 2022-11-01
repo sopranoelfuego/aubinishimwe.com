@@ -213,6 +213,7 @@ function ContactMe() {
              borderRadius: '50%',
              border: `1px solid  ${theme?.palette?.text?.primary}`,
             }}
+            name="contact_button"
            >
             {value?.icon}
            </IconButton>
