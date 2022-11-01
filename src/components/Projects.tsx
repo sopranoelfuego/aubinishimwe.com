@@ -10,7 +10,7 @@ function Projects() {
 
     ]
   return (
-    <Box id="#projects" sx={{ minHeight: '100vh', width:"100%", margin:"0 auto",padding: { xs:"60px 0",sm:"none"},
+    <Box id="projects" sx={{ minHeight: '100vh', width:"100%", margin:"0 auto",padding: { xs:"60px 0",sm:"none"},
     maxWidth:"1000px", }}>
         
         <ComponentTitle number="02." nameTitle="Projects"/>

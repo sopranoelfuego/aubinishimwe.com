@@ -5,7 +5,6 @@ import {
  List,
  ListItem,
  Stack,
- styled,
  Toolbar,
  Typography,
  useTheme,
@@ -16,6 +15,7 @@ import { Box } from '@mui/system'
 import { ColorModeContext } from '@pages/_app'
 import { GLobalButton } from '@utils/Button'
 import Link from './CustomLink'
+import Image from 'next/image'
 export function Header() {
  const [visibility, setVisibility] = useState<'none' | 'visible'>('none')
  useEffect(() => {
@@ -60,8 +60,8 @@ export function Header() {
       position: 'relative',
      }}
     >
-     <Link href="/" passHref>
-      <h1>A</h1>
+     <Link href="/" passHref style={{color: `${theme?.palette?.primary?.contrastText}`}}>
+         <Image src="/logo.png" width="30px" height="32" alt="logo"/>
      </Link>
 
      <List
@@ -76,7 +76,6 @@ export function Header() {
        flexDirection: { xs: 'column', md: 'row' },
        padding: { xs: '4px 15px', md: '0' },
        justifyContent: 'center',
-
        alignItems: 'center',
        fontSize: { xs: '20px', md: '13px' },
        backgroundColor: { xs: `${theme.palette.primary.light}`, md: 'inherit' },
@@ -115,7 +114,6 @@ export function Header() {
           },
          }}
         >
-         <Link href={`${value?.href}`} passHref>
           <Stack direction="row" alignItems="center">
            <Typography
             variant="caption"
@@ -123,9 +121,12 @@ export function Header() {
            >
             {value?.number}.
            </Typography>
-           <Typography variant="caption">{value?.name}</Typography>
-          </Stack>
+         <Link href={`${value?.href}`} passHref>
+           <Typography variant="caption" display="inline-flex">
+            {value?.name}
+            </Typography>
          </Link>
+          </Stack>
         </Box>
        </ListItem>
       ))}

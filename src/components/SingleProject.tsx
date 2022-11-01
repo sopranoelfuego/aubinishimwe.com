@@ -39,10 +39,10 @@ function SingleProject({ project }) {
 
     />
     <CardContent>
-     <Typography gutterBottom variant="h5"  sx={{color:`${theme?.palette?.text?.primary}`,transition:"all  300ms ease-in"}}>
+     <Typography gutterBottom variant="h5" color={`${theme?.palette?.text?.primary}`} fontFamily="monospace" sx={{transition:"all  300ms ease-in"}}>
       {project?.name}
      </Typography>
-     <Typography variant="body2" color="text.secondary">
+     <Typography variant="body2" color="text.secondary" fontFamily="monospace">
       Lizards are a widespread group of squamate reptiles, with over 6,000
       species, ranging across all continents except Antarctica
      </Typography>
