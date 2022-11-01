@@ -32,7 +32,7 @@ function AboutMe() {
   display: 'block',
   margin: '0 auto',
   maxWidth: '300px',
-  width: matches ? '100%' : 'auto',
+  width:  '300px',
   marginBottom: matches ? '20px' : '0',
   height: '300px',
   '&::before': {
@@ -154,7 +154,7 @@ function AboutMe() {
      }}
     >
      <ImageContainer>
-      <Image src="/aubin.jpeg" layout="fill" alt="aubin" />
+      <Image src="/aubin.webp" layout="fill" alt="aubin" />
      </ImageContainer>
     </Box>
    </Box>

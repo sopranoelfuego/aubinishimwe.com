@@ -8,14 +8,14 @@ function Projects() {
   {
    name: 'Ult-Connect',
    description: '',
-   image: '/projects/ultConnect.png',
+   image: '/projects/ult.webp',
    gitRepos: '',
    stack: 'React material-Ui Mongodb Firebase(auth)',
   },
   {
    name: 'Education website',
    description: '',
-   image: '/projects/education.png',
+   image: '/projects/educ.webp',
    gitRepos: '',
    stack: 'Javascript html css',
   },
