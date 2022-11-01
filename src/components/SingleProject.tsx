@@ -43,7 +43,7 @@ function SingleProject({ project }) {
     }}
    >
     <Image
-     alt="green iguana"
+     alt={project?.name}
      height="250"
      width="350"
      objectFit='cover'

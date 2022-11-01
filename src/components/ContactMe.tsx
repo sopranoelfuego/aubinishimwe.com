@@ -178,8 +178,8 @@ function ContactMe() {
       <Image
        src="/contact.svg"
        alt="pp"
-       width={250}
-       height={250}
+       width="250"
+       height="250"
       />
       <Box
        sx={{
