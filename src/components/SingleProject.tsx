@@ -15,31 +15,52 @@ import { FiExternalLink, FiGithub } from 'react-icons/fi'
 function SingleProject({ project }) {
  const theme = useTheme()
  return (
-  <Grid item xs={12} md={6} lg={4} sx={{ maxWidth: 345,
-    transition:"transform 300ms ease-in",
+  <Grid
+   item
+   xs={12}
+   md={6}
+   lg={4}
+   sx={{
+    maxWidth: 345,
+    transition: 'transform 300ms ease-in',
     width: '100%',
     boxShadow: `0 10px 20px -10px ${theme?.palette?.background?.default}`,
-    "&:hover":{
-      transform: 'translateY(-5px)'
+    '&:hover': {
+     transform: 'translateY(-5px)',
     },
 
-    "&:hover  h5":{
-        color: `${theme?.palette?.primary?.contrastText}`
-    }
-   }}>
-   <Card sx={{ width: '100%','&:hover > img':{
-  filter: "none",
-  } }}>
+    '&:hover  h5': {
+     color: `${theme?.palette?.primary?.contrastText}`,
+    },
+   }}
+  >
+   <Card
+    sx={{
+     width: '100%',
+     '&:hover > img': {
+      filter: 'none',
+     },
+    }}
+   >
     <CardMedia
      component="img"
      alt="green iguana"
      height="250"
      image={project?.image}
-     sx={{objectFit:"cover",flexGrow:1,filter:{xs:"none",md:"inherit"}}}
-
+     sx={{
+      objectFit: 'cover',
+      flexGrow: 1,
+      filter: { xs: 'none', md: 'inherit' },
+     }}
     />
     <CardContent>
-     <Typography gutterBottom variant="h5" color={`${theme?.palette?.text?.primary}`} fontFamily="monospace" sx={{transition:"all  300ms ease-in"}}>
+     <Typography
+      gutterBottom
+      variant="h5"
+      color={`${theme?.palette?.text?.primary}`}
+      fontFamily="monospace"
+      sx={{ transition: 'all  300ms ease-in' }}
+     >
       {project?.name}
      </Typography>
      <Typography variant="body2" color="text.secondary" fontFamily="monospace">

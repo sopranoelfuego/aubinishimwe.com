@@ -10,6 +10,7 @@ import {
  useTheme,
 } from '@mui/material'
 import ComponentTitle from '@utils/ComponentTitle'
+import Image from 'next/image'
 import React from 'react'
 
 function AboutMe() {
@@ -26,10 +27,14 @@ function AboutMe() {
   { key: '7', name: 'Docker' },
   { key: '8', name: 'Mysql and MongoDb databases' },
  ]
- const ImageContainer = styled('div')(({ theme }) => ({
+ const ImageContainer = styled(Box)(({ theme }) => ({
   position: 'relative',
   display: 'block',
   margin: '0 auto',
+  maxWidth: '300px',
+  width: matches ? '100%' : 'auto',
+  marginBottom: matches ? '20px' : '0',
+  height: '300px',
   '&::before': {
    content: '""',
    display: matches ? 'none' : 'inline-block',
@@ -45,8 +50,8 @@ function AboutMe() {
    position: 'absolute',
   },
   '& > img': {
-   transform: 'translate(-5px,-5px)',
-   filter: matches ? 'none' : 'inherit',
+   transform: { xs: 'none', sm: 'translate(-5px,-5px)' },
+   filter: 'none',
   },
   '&:hover  img': {
    transform: 'none',
@@ -84,16 +89,18 @@ function AboutMe() {
      spacing={2}
      sx={{ textJustify: 'justify', flex: 1 }}
     >
-     <Typography fontFamily="monospace">
+     <Typography variant="body1" fontFamily="monospace">
       Hello! My name is Aubin and I enjoy creating things that live on the
       internet. My interest in coding stuffs started back in 2015 by watching my
-      childhood movie {' '}
+      childhood movie{' '}
       <Link
        href="https://fr.wikipedia.org/wiki/Matrix_(film)"
-       sx={{display: 'inline-flex',
-       color: `${theme?.palette?.primary?.contrastText}`,}}
+       sx={{
+        display: 'inline-flex',
+        color: `${theme?.palette?.primary?.contrastText}`,
+       }}
       >
-        The Matrix
+       The Matrix
       </Link>{' '}
       i was amazed by the way auto-calculations was displayed on Terminals ,so i
       decided to google some stuff related to the etichal hacking and coding.
@@ -124,7 +131,7 @@ function AboutMe() {
          sx={{
           display: 'flex',
           alignItems: 'flex-start',
-          fontFamily:"monospace",
+          fontFamily: 'monospace',
           '&::before': {
            content: '"▹"',
            display: 'inline-flex',
@@ -144,21 +151,10 @@ function AboutMe() {
       position: 'relative',
       width: '100%',
       flex: 1,
-      padding: { xs: '0 0 30px 0', sm: '0 0 0 80px' },
      }}
     >
      <ImageContainer>
-      <img
-       src="/aubin.jpeg"
-       style={{
-        width: '100%',
-        height: '100%',
-        borderRadius: '5px',
-        zIndex: 20,
-        maxWidth: '300px',
-       }}
-       alt="aubin"
-      />
+      <Image src="/aubin.jpeg" layout="fill" alt="aubin" />
      </ImageContainer>
     </Box>
    </Box>

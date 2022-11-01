@@ -8,19 +8,18 @@ export function Hero() {
   <Box
    id="/"
    sx={{
-    minHeight: {xs:"max-content",md:'100vh'},
+    minHeight: { xs: 'max-content', md: '100vh' },
     justifyContent: 'center',
     alignItems: 'flex-start',
-    textJustify:"justify",
+    textJustify: 'justify',
     display: 'flex',
-    lineHeight:1,
-    width:"100%",
-    margin:"0 auto",
-    maxWidth:"1000px",
+    lineHeight: 1,
+    width: '100%',
+    margin: '0 auto',
+    maxWidth: '1000px',
     gap: '10px',
     flexDirection: 'column',
-    padding: { xs:"60px 0",sm:"none"}
-
+    padding: { xs: '60px 0', sm: 'none' },
    }}
   >
    <Typography
@@ -44,13 +43,19 @@ export function Hero() {
    >
     Aubin Ishimwe.
    </Typography>
-  
-   <Typography variant="h2" component="h2" fontWeight="600" fontFamily="monospace" fontSize="clamp(30px, 8vw, 80px)" >
+
+   <Typography
+    variant="h2"
+    component="h2"
+    fontWeight="600"
+    fontFamily="monospace"
+    fontSize="clamp(30px, 8vw, 80px)"
+   >
     Web3 is my passion.
    </Typography>
    <Typography variant="body1" fontFamily="monospace" maxWidth="450px">
-    I’m a software engineer ,based in Burundi. Currently work with new techs , I’m focused on
-    building accessible, human-centered products at{' '}
+    I’m a software engineer ,based in Burundi. Currently work with new techs ,
+    I’m focused on building accessible, human-centered products at{' '}
     <Link
      href="http://bluetec.bi/"
      sx={{

@@ -38,7 +38,7 @@ export function Header() {
     position: 'fixed',
     top: 0,
     width: '100vw',
-    height: {xs:"60px",sm:'100px'},
+    height: { xs: '60px', sm: '100px' },
     fontFamily: 'monospace',
     boxShadow: `0 10px 30px -10px ${theme?.palette?.background?.default}`,
     zIndex: 20,
@@ -48,7 +48,7 @@ export function Header() {
       ? 'rgba(10, 25, 47, 0.85)'
       : 'rgba(255, 255, 255, 0.85)',
     backdropFilter: 'blur(5px)',
-    padding: {xs:"0 10px",sm:'0 10px',md:'0 50px'},
+    padding: { xs: '0 10px', sm: '0 10px', md: '0 50px' },
    }}
   >
    <Container maxWidth="xl">
@@ -60,8 +60,12 @@ export function Header() {
       position: 'relative',
      }}
     >
-     <Link href="/" passHref style={{color: `${theme?.palette?.primary?.contrastText}`}}>
-         <Image src="/logo.png" width="30px" height="32" alt="logo"/>
+     <Link
+      href="/"
+      passHref
+      style={{ color: `${theme?.palette?.primary?.contrastText}` }}
+     >
+      <Image src="/logo.png" width="30px" height="32" alt="logo" />
      </Link>
 
      <List
@@ -78,6 +82,7 @@ export function Header() {
        justifyContent: 'center',
        alignItems: 'center',
        fontSize: { xs: '20px', md: '13px' },
+       borderRadius:"5px",
        backgroundColor: { xs: `${theme.palette.primary.light}`, md: 'inherit' },
        gap: '20px',
        letterSpacing: '1px',
@@ -114,7 +119,7 @@ export function Header() {
           },
          }}
         >
-            <Link href={`${value?.href}`} passHref>
+         <Link href={`${value?.href}`} passHref>
           <Stack direction="row" alignItems="center">
            <Typography
             variant="caption"
@@ -124,19 +129,19 @@ export function Header() {
            </Typography>
            <Typography variant="caption" display="inline-flex">
             {value?.name}
-            </Typography>
+           </Typography>
           </Stack>
          </Link>
         </Box>
        </ListItem>
       ))}
       <ListItem disableGutters>
-       <GLobalButton>Resume</GLobalButton>
+       <GLobalButton name="resume">Resume</GLobalButton>
       </ListItem>
      </List>
 
      <Box sx={{ display: { xs: 'inline-block', md: 'none' } }}>
-      <IconButton onClick={handleDisplayMenu}>
+      <IconButton onClick={handleDisplayMenu} name="menu-button">
        <BiMenuAltRight />
       </IconButton>
      </Box>

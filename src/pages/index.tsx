@@ -1,6 +1,6 @@
 import { Header } from '@components'
 import { Box, useTheme } from '@mui/material'
-import { NextSeo } from 'next-seo';
+import { NextSeo } from 'next-seo'
 import Head from 'next/head'
 import { Layout } from '@layout'
 import { Hero } from '@components'
@@ -13,21 +13,20 @@ const Home = () => {
  return (
   <>
    <NextSeo
-      title="aubin ishimwe"
-      
-      description="hello my name is aubin ishimwe am a web developper and this is my personal portefolio and blog included"
-    //   canonical="https://www.canonical.ie/"
+    title="aubin ishimwe"
+    description="my name is aubin ishimwe am a web developper and this is my personal portefolio and blog included"
     additionalLinkTags={[
-        {
-          rel: 'icon',
-          href: 'logo.png',
-        }]}
+     {
+      rel: 'icon',
+      href: 'logo.png',
+     },
+    ]}
     twitter={{
-        handle: '@aubinishimwe2',
-        site: '@aubinishimwe2',
-        cardType: 'summary_large_image',
-      }}
-    />
+     handle: '@aubinishimwe2',
+     site: '@aubinishimwe2',
+     cardType: 'summary_large_image',
+    }}
+   />
    <Box
     sx={{
      bgcolor: `${theme?.palette?.background?.default}`,

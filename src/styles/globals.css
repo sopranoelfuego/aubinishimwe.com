@@ -29,10 +29,7 @@ body {
   font-size: var(--fz-xl);
   line-height: 1.3;
 }
-img{
-  filter: grayscale(80%);
-  transition:all 300ms ease-in
-}
+
 
 :root {
 
