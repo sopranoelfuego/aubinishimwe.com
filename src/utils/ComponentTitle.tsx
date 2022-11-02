@@ -1,5 +1,5 @@
-import { Box, Stack, styled, useMediaQuery, useTheme } from '@mui/material'
 import React from 'react'
+import { Box, Stack, styled, useMediaQuery, useTheme } from '@mui/material'
 
 function ComponentTitle({ number, nameTitle }) {
  const theme = useTheme()

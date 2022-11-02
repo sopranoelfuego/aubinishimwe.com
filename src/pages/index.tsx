@@ -1,7 +1,6 @@
 import { Header } from '@components'
 import { Box, useTheme } from '@mui/material'
 import { NextSeo } from 'next-seo'
-import Head from 'next/head'
 import { Layout } from '@layout'
 import { Hero } from '@components'
 import AboutMe from '@components/AboutMe'
