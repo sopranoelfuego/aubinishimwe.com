@@ -66,7 +66,7 @@ export function Header() {
       passHref
       style={{ color: `${theme?.palette?.primary?.contrastText}` }}
      >
-      <Image src="/logo.png" width="32px" height="32px" alt="logo" />
+      <Image src="/logo.png" width={32} height={32} alt="logo" />
      </Link>
 
      <List
@@ -137,7 +137,7 @@ export function Header() {
        </ListItem>
       ))}
       <ListItem disableGutters>
-       <GLobalButton name="resume">Resume</GLobalButton>
+       <GLobalButton name="resume" aria-label="resume">Resume</GLobalButton>
       </ListItem>
      </List>
 

@@ -156,7 +156,7 @@ function ContactMe() {
       multiline
       fullWidth
      />
-     <SendButton onClick={handlerSubmit} name="send">
+     <SendButton onClick={handlerSubmit} name="send" aria-label="send-contact">
       send
      </SendButton>
     </Grid>
@@ -166,6 +166,7 @@ function ContactMe() {
       sx={{
        width: '100%',
        display: 'flex',
+       position:"relative",
        flexDirection: 'column',
        justifyContent: 'space-between',
        alignItems: 'center',
@@ -174,8 +175,9 @@ function ContactMe() {
       <Image
        src="/contact.svg"
        alt="pp"
-       width="250"
-       height="250"
+       width={250}
+       height={250}
+
       />
       <Box
        sx={{
@@ -210,6 +212,7 @@ function ContactMe() {
              border: `1px solid  ${theme?.palette?.text?.primary}`,
             }}
             name="contact_button"
+            aria-label='contact-me'
            >
             {value?.icon}
            </IconButton>

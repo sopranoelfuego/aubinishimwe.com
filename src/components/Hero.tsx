@@ -70,7 +70,7 @@ export function Hero() {
      Bluetec
     </Link>
    </Typography>
-   <GLobalButton sx={{ marginTop: '20px' }} name="resume">
+   <GLobalButton sx={{ marginTop: '20px' }} name="resume" aria-label="get-resume">
     Check my resume
    </GLobalButton>
   </Box>

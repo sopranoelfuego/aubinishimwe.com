@@ -89,10 +89,10 @@ function SingleProject({ project }) {
     <CardActions
      sx={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}
     >
-     <IconButton size="small" name="github_button">
+     <IconButton size="small" name="github_button" aria-label="gitub-product">
       <FiGithub />
      </IconButton>
-     <IconButton size="small" name="view_button">
+     <IconButton size="small" name="view_button" aria-label="view-button">
       <FiExternalLink />
      </IconButton>
     </CardActions>
