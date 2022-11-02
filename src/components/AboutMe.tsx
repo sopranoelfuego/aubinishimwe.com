@@ -90,7 +90,7 @@ function AboutMe() {
      sx={{ textJustify: 'justify', flex: 1 }}
     >
      <Typography variant="body1" fontFamily="monospace">
-      Hello! My name is Aubin and I enjoy creating things that live on the
+      Hello again, My name is Aubin and I enjoy creating things that live on the
       internet. My interest in coding stuffs started back in 2015 by watching my
       childhood movie{' '}
       <Link
@@ -101,13 +101,13 @@ function AboutMe() {
        }}
       >
        The Matrix
-      </Link>{' '}
+      </Link>{' ,'}
       i was amazed by the way auto-calculations was displayed on Terminals ,so i
-      decided to google some stuff related to the etichal hacking and coding.
+      decided to google some stuffs related to the ethical hacking and coding.
      </Typography>
      <Typography fontFamily="monospace" width="100%">
       So i decided to catch the basics(HTML,CSS,JAVASCRIPT) and attend coding
-      communities events, now i got a bachelor degree in software Engineer
+      communities events, now i got a bachelor degree in software Engineer.
      </Typography>
 
      <Box>
