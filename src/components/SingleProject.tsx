@@ -9,17 +9,26 @@ import {
  useTheme,
 } from '@mui/material'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { FiExternalLink, FiGithub } from 'react-icons/fi'
 
 function SingleProject({ project }) {
  const theme = useTheme()
+ const [length, setLength] = useState<number>(100)
+
+ const [subDescription, setSubDescription] = useState<string>(project?.description?.substr(0,length))
+ useEffect(() => {
+     setSubDescription(project?.description?.substr(0,length))
+ }, [length])
+ const handleIncrementLength=()=>setLength(prev => prev + 100)
+ const handleDecrementLength=()=>setLength(prev => prev - 100)
  return (
   <Grid
    item
    xs={12}
    md={6}
    lg={4}
+
    sx={{
     maxWidth: 350,
     transition: 'transform 300ms ease-in',
@@ -46,11 +55,11 @@ function SingleProject({ project }) {
      alt={project?.name}
      height="250"
      width="350"
-     objectFit='cover'
+     objectFit='fill'
      src={project?.image}
      
     />
-    <CardContent>
+    <CardContent sx={{'&:hover':{cursor:"pointer"}}}>
      <Typography
       gutterBottom
       variant="h5"
@@ -60,10 +69,11 @@ function SingleProject({ project }) {
      >
       {project?.name}
      </Typography>
-     <Typography variant="body2" color="text.secondary" fontFamily="monospace">
-      Lizards are a widespread group of squamate reptiles, with over 6,000
-      species, ranging across all continents except Antarctica
+     <Typography variant="body2" color="text.secondary" textAlign="match-parent" fontFamily="monospace">
+     {subDescription}
      </Typography>
+   {length >= project?.description?.length?'': <Typography variant="body2"  onClick={handleIncrementLength} color={`${theme?.palette?.primary?.contrastText}`}>more</Typography>}
+   {length > 100? <Typography variant="body2"  onClick={handleDecrementLength} color={`${theme?.palette?.primary?.contrastText}`}>reduce</Typography>:""}
      <Box
       sx={{
        width: '100%',

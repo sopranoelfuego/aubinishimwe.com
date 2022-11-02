@@ -7,14 +7,14 @@ function Projects() {
  const projects = [
   {
    name: 'Ult-Connect',
-   description: '',
+   description: 'A social network application for the ult university, with 4 modules(multimedia publications,instant messaging,notifications system,admin panel) and 2 actors(students,admin)  ',
    image: '/projects/ult.webp',
    gitRepos: '',
-   stack: 'React material-Ui Mongodb Firebase(auth)',
+   stack: 'React . material-Ui . Socket.io . Mongodb . Firebase(auth) ',
   },
   {
    name: 'Education website',
-   description: '',
+   description: 'A education website for praticing css core stuffs like flexbox,grid,frame and much more,is a vanilla javascript project with pure html and css ',
    image: '/projects/educ.webp',
    gitRepos: '',
    stack: 'Javascript html css',
@@ -32,7 +32,7 @@ function Projects() {
    }}
   >
    <ComponentTitle number="02." nameTitle="Projects" />
-   <Grid container spacing={2} justifyContent="center">
+   <Grid container spacing={2} >
     {projects?.map((value, key) => (
      <SingleProject key={key} project={value} />
     ))}

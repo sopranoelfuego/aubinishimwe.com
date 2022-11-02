@@ -65,7 +65,7 @@ export function Header() {
       passHref
       style={{ color: `${theme?.palette?.primary?.contrastText}` }}
      >
-      <Image src="/logo.png" width="30px" height="32" alt="logo" />
+      <Image src="/logo.png" width="32px" height="32px" alt="logo" />
      </Link>
 
      <List
@@ -141,7 +141,7 @@ export function Header() {
      </List>
 
      <Box sx={{ display: { xs: 'inline-block', md: 'none' } }}>
-      <IconButton onClick={handleDisplayMenu} name="menu_button">
+      <IconButton onClick={handleDisplayMenu} name="menuButton">
        <BiMenuAltRight />
       </IconButton>
      </Box>

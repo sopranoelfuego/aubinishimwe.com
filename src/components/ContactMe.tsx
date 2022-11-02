@@ -20,13 +20,11 @@ import {
 import { FiGithub } from 'react-icons/fi'
 
 import { ImLocation2 } from 'react-icons/im'
-import { BsWhatsapp } from 'react-icons/bs'
 import { SiGmail } from 'react-icons/si'
 import Image from 'next/image'
 
 const socialContact = [
  { name: 'bujumbura,burundi', icon: <ImLocation2 /> },
- { name: '+25769778171', icon: <BsWhatsapp /> },
  { name: 'aubinjaja@gmail.com', icon: <SiGmail /> },
 ]
 function ContactMe() {
