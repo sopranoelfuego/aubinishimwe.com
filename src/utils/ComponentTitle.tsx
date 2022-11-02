@@ -1,6 +1,9 @@
 import React from 'react'
-import { Box, Stack, styled, useMediaQuery, useTheme } from '@mui/material'
+import useMediaQuery from '@mui/material/useMediaQuery'
 
+import { styled, useTheme } from '@mui/material/styles'
+import Box from '@mui/material/Box'
+import Stack from '@mui/material/Stack'
 function ComponentTitle({ number, nameTitle }) {
  const theme = useTheme()
  const matches = useMediaQuery(theme.breakpoints.up('sm'))

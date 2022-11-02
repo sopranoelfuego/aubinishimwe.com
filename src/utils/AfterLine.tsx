@@ -1,4 +1,4 @@
-import { styled} from "@mui/material";
+import { styled} from "@mui/material/styles";
 export const afterLine=({ width,height})=>( styled('div')(({ theme }) => ({
     width: width,
     height: height,

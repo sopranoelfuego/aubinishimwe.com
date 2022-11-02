@@ -1,6 +1,9 @@
-import { Stack, styled, Tooltip } from '@mui/material'
-import { afterLine } from '@utils'
 import React from 'react'
+
+import Stack from "@mui/material/Stack"
+import Tooltip from "@mui/material/Tooltip"
+import {styled} from "@mui/material/styles"
+import { afterLine } from '@utils'
 import {
  AiFillLinkedin,
  AiOutlineInstagram,

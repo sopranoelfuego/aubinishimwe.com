@@ -1,6 +1,10 @@
-import { Box, Link, Typography, useTheme } from '@mui/material'
-import { GLobalButton } from '@utils'
 import React from 'react'
+
+import Box from '@mui/material/Box'
+import Link from '@mui/material/Link'
+import Typography from '@mui/material/Typography'
+import { useTheme } from '@mui/material/styles'
+import { GLobalButton } from '@utils/Button'
 
 export function Hero() {
  const theme = useTheme()
@@ -66,7 +70,9 @@ export function Hero() {
      Bluetec
     </Link>
    </Typography>
-   <GLobalButton sx={{ marginTop: '20px' }} name="resume">Check my resume</GLobalButton>
+   <GLobalButton sx={{ marginTop: '20px' }} name="resume">
+    Check my resume
+   </GLobalButton>
   </Box>
  )
 }

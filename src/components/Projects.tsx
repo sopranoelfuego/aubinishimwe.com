@@ -1,4 +1,5 @@
-import { Box, Grid } from '@mui/material'
+import Box from "@mui/material/Box"
+import Grid from "@mui/material/Grid"
 import ComponentTitle from '@utils/ComponentTitle'
 import React from 'react'
 import SingleProject from './SingleProject'

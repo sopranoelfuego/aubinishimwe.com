@@ -1,21 +1,22 @@
 import React, { useContext, useEffect, useState } from 'react'
-import {
- Container,
- IconButton,
- List,
- ListItem,
- Stack,
- Toolbar,
- Typography,
- useTheme,
-} from '@mui/material'
+
+import Container from '@mui/material/Container'
+import IconButton from '@mui/material/IconButton'
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+import Stack from '@mui/material/Stack'
+import Toolbar from '@mui/material/Toolbar'
+import Typography from '@mui/material/Typography'
+import {useTheme} from '@mui/material/styles'
+
 import { BiMenuAltRight } from 'react-icons/bi'
 import { BsBrightnessHigh, BsBrightnessHighFill } from 'react-icons/bs'
-import { Box } from '@mui/system'
+import  Box  from '@mui/system/Box'
 import { ColorModeContext } from '@pages/_app'
 import { GLobalButton } from '@utils/Button'
 import Link from './CustomLink'
 import Image from 'next/image'
+
 export function Header() {
  const [visibility, setVisibility] = useState<'none' | 'visible'>('none')
  useEffect(() => {

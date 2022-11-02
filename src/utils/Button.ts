@@ -1,4 +1,4 @@
-import { styled } from '@mui/material'
+import { styled } from '@mui/material/styles'
 
 export const GLobalButton = styled('button')(({ theme }) => ({
  padding: '10px 25px',

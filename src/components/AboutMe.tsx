@@ -1,21 +1,21 @@
-import {
- Box,
- List,
- ListItem,
- Stack,
- styled,
- Typography,
- Link,
- useMediaQuery,
- useTheme,
-} from '@mui/material'
+import React from 'react'
+
+import Stack from '@mui/material/Stack'
+import Box from '@mui/material/Box'
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+import { styled, useTheme } from '@mui/material/styles'
+import Typography from '@mui/material/Typography'
+import useMediaQuery from '@mui/material/useMediaQuery'
 import ComponentTitle from '@utils/ComponentTitle'
 import Image from 'next/image'
-import React from 'react'
+
+import Link from '@mui/material/Link'
 
 function AboutMe() {
  const theme = useTheme()
- const matches = useMediaQuery(theme.breakpoints.down('sm'))
+
+ const matches = useMediaQuery(theme?.breakpoints?.down('sm'))
 
  const techList = [
   { key: '1', name: 'typescript' },
@@ -32,7 +32,7 @@ function AboutMe() {
   display: 'block',
   margin: '0 auto',
   maxWidth: '300px',
-  width:  '300px',
+  width: '300px',
   marginBottom: matches ? '20px' : '0',
   height: '300px',
   '&::before': {
@@ -101,9 +101,10 @@ function AboutMe() {
        }}
       >
        The Matrix
-      </Link>{' ,'}
-      i was amazed by the way auto-calculations was displayed on Terminals ,so i
-      decided to google some stuffs related to the ethical hacking and coding.
+      </Link>
+      {' ,'}i was amazed by the way auto-calculations was displayed on Terminals
+      ,so i decided to google some stuffs related to the ethical hacking and
+      coding.
      </Typography>
      <Typography fontFamily="monospace" width="100%">
       So i decided to catch the basics(HTML,CSS,JAVASCRIPT) and attend coding

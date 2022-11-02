@@ -1,13 +1,11 @@
-import {
- Box,
- Card,
- CardActions,
- CardContent,
- Grid,
- IconButton,
- Typography,
- useTheme,
-} from '@mui/material'
+import Box from "@mui/material/Box"
+import Card from "@mui/material/Card"
+import CardActions from "@mui/material/CardActions"
+import CardContent from "@mui/material/CardContent"
+import Grid from "@mui/material/Grid"
+import IconButton from "@mui/material/IconButton"
+import Typography from "@mui/material/Typography"
+import {useTheme} from "@mui/material/styles"
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import { FiExternalLink, FiGithub } from 'react-icons/fi'
