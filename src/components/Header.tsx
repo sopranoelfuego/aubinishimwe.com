@@ -142,7 +142,7 @@ export function Header() {
      </List>
 
      <Box sx={{ display: { xs: 'inline-block', md: 'none' } }}>
-      <IconButton onClick={handleDisplayMenu} name="menuButton">
+      <IconButton onClick={handleDisplayMenu} name="menuButton" aria-label="menu-drop-down">
        <BiMenuAltRight />
       </IconButton>
      </Box>
