@@ -15,7 +15,7 @@ function Projects() {
   },
   {
    name: 'Education website',
-   description: 'A education website for praticing css core stuffs like flexbox,grid,frame and much more,is a vanilla javascript project with pure html and css ',
+   description: 'A education website ui for praticing css cores stuffs like flexbox,grid,frame and much more,is a vanilla javascript project with pure html and css ',
    image: '/projects/educ.webp',
    gitRepos: '',
    stack: 'Javascript html css',

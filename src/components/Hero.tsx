@@ -71,7 +71,10 @@ export function Hero() {
     </Link>
    </Typography>
    <GLobalButton sx={{ marginTop: '20px' }} name="resume" aria-label="get-resume">
+      
+    <Link href="/cv.pdf" sx={{color: `${theme?.palette?.primary?.contrastText}`,}}>
     Check my resume
+    </Link>
    </GLobalButton>
   </Box>
  )
