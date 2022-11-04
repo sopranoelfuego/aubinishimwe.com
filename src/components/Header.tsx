@@ -68,8 +68,15 @@ export function Header() {
      >
       <Image src="/logo.png" width={32} height={32} alt="logo" />
      </Link>
-
-     <List
+     <Box sx={{display:"flex",alignItems:"center",gap:"20px"}}>
+     <IconButton onClick={colorMode.toggleColorMode} name="theme_button_toggle">
+        {theme?.palette?.mode ? (
+         <BsBrightnessHighFill fontSize="26px" />
+        ) : (
+         <BsBrightnessHigh fontSize="26px" />
+        )}
+       </IconButton>
+       <List
       sx={{
        width: 'auto',
        display: 'flex',
@@ -89,15 +96,6 @@ export function Header() {
        letterSpacing: '1px',
       }}
      >
-      <ListItem disableGutters>
-       <IconButton onClick={colorMode.toggleColorMode} name="theme_button_toggle">
-        {theme?.palette?.mode ? (
-         <BsBrightnessHighFill fontSize="26px" />
-        ) : (
-         <BsBrightnessHigh fontSize="26px" />
-        )}
-       </IconButton>
-      </ListItem>
       {navListItems?.map((value, key) => (
        <ListItem
         key={key}
@@ -124,11 +122,13 @@ export function Header() {
           <Stack direction="row" alignItems="center">
            <Typography
             variant="caption"
+            fontFamily="monospace"
             sx={{ color: `${theme?.palette?.primary?.contrastText}` }}
            >
             {value?.number}.
            </Typography>
-           <Typography variant="caption" display="inline-flex">
+            
+           <Typography variant="caption" fontFamily="monospace" display="inline-flex">
             {value?.name}
            </Typography>
           </Stack>
@@ -140,6 +140,8 @@ export function Header() {
        <GLobalButton name="resume" aria-label="resume">Resume</GLobalButton>
       </ListItem>
      </List>
+     </Box>
+     
 
      <Box sx={{ display: { xs: 'inline-block', md: 'none' } }}>
       <IconButton onClick={handleDisplayMenu} name="menuButton" aria-label="menu-drop-down">
