@@ -39,6 +39,8 @@ export function Header() {
     position: 'fixed',
     top: 0,
     width: '100vw',
+    display:"flex",
+    alignItems:"center",
     height: { xs: '60px', sm: '100px' },
     fontFamily: 'monospace',
     boxShadow: `0 10px 30px -10px ${theme?.palette?.background?.default}`,
@@ -52,13 +54,14 @@ export function Header() {
     padding: { xs: '0 10px', sm: '0 10px', md: '0 50px' },
    }}
   >
-   <Container maxWidth="xl">
+   <Container maxWidth="xl" >
     <Toolbar
      disableGutters
      sx={{
       display: 'flex',
       justifyContent: 'space-between',
       position: 'relative',
+      margin:'auto 0'
      }}
     >
      <Link
