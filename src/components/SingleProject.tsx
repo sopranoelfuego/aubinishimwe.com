@@ -5,7 +5,7 @@ import CardContent from "@mui/material/CardContent"
 import Grid from "@mui/material/Grid"
 import IconButton from "@mui/material/IconButton"
 import Typography from "@mui/material/Typography"
-import {useTheme} from "@mui/material/styles"
+import useTheme from "@mui/material/styles/useTheme"
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import { FiExternalLink, FiGithub } from 'react-icons/fi'

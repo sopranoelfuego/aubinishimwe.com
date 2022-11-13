@@ -7,7 +7,7 @@ import ListItem from '@mui/material/ListItem'
 import Stack from '@mui/material/Stack'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
-import {useTheme} from '@mui/material/styles'
+import useTheme from "@mui/material/styles/useTheme"
 
 import { BiMenuAltRight } from 'react-icons/bi'
 import { BsBrightnessHigh, BsBrightnessHighFill } from 'react-icons/bs'

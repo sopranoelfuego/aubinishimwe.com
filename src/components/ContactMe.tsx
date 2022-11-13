@@ -8,7 +8,8 @@ import List from '@mui/material/List'
 import ListItem from '@mui/material/ListItem'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
-import {useTheme,styled} from '@mui/material/styles'
+import useTheme from "@mui/material/styles/useTheme"
+import styled from "@mui/material/styles/styled"
 import ComponentTitle from '@utils/ComponentTitle'
 import {
  AiFillLinkedin,

@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react'
 import { Header } from '@components'
-import { Box, useTheme } from '@mui/material'
+import Box from "@mui/material/Box"
+import useTheme from "@mui/material/styles/useTheme"
 import { NextSeo } from 'next-seo'
 import { Layout } from '@layout'
 import { Hero } from '@components/Hero'

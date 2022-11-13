@@ -3,7 +3,7 @@ import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
 import Typography from '@mui/material/Typography'
 import Stack from '@mui/material/Stack'
-import {useTheme} from "@mui/material/styles"
+import useTheme from '@mui/material/styles/useTheme'
 import { afterLine } from '@utils'
 import SocialMedias from './SocialMedias'
 import Footer from '@components/Footer'
@@ -62,7 +62,7 @@ export const Layout: React.FC = ({ children }: any) => {
         sx={{
          display: 'flex',
          flexDirection: 'column',
-         textDecoration:"none",
+         textDecoration: 'none',
          color: `inherit`,
          transition: 'all  300ms ease-in',
          '&:hover': {

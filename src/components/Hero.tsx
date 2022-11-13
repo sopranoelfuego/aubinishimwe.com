@@ -3,7 +3,7 @@ import React from 'react'
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
 import Typography from '@mui/material/Typography'
-import { useTheme } from '@mui/material/styles'
+import useTheme from "@mui/material/styles/useTheme"
 import { GLobalButton } from '@utils/Button'
 
 export function Hero() {
