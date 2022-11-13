@@ -1,12 +1,13 @@
+import React, { Suspense } from 'react'
 import { Header } from '@components'
 import { Box, useTheme } from '@mui/material'
 import { NextSeo } from 'next-seo'
 import { Layout } from '@layout'
 import { Hero } from '@components/Hero'
-import AboutMe from '@components/AboutMe'
-import ContactMe from '@components/ContactMe'
-import Projects from '@components/Projects'
-
+import dynamic from 'next/dynamic'
+const ContactMe = dynamic(() => import('@components/AboutMe'),{suspense:true})
+const Projects = dynamic(() => import('@components/Projects'),{suspense:true})
+const AboutMe = dynamic(() => import('@components/AboutMe'),{suspense:true})
 const Home = () => {
  const theme = useTheme()
  return (
@@ -20,10 +21,12 @@ const Home = () => {
       href: 'logo.png',
      },
     ]}
-    languageAlternates={[{
+    languageAlternates={[
+     {
       hrefLang: 'de-AT',
       href: 'https://www.canonical.ie/de',
-    }]}
+     },
+    ]}
     twitter={{
      handle: '@aubinishimwe2',
      site: '@aubinishimwe2',
@@ -39,9 +42,11 @@ const Home = () => {
     <Header />
     <Layout>
      <Hero />
+     <Suspense fallback={<div>Loading ...</div>}>
      <AboutMe />
-     <Projects />
-     <ContactMe />
+      <Projects />
+      <ContactMe />
+     </Suspense>
     </Layout>
    </Box>
   </>
