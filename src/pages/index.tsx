@@ -6,7 +6,7 @@ import { NextSeo } from 'next-seo'
 import { Layout } from '@layout'
 import { Hero } from '@components/Hero'
 import dynamic from 'next/dynamic'
-const ContactMe = dynamic(() => import('@components/AboutMe'),{suspense:true})
+const ContactMe = dynamic(() => import('@components/ContactMe'),{suspense:true})
 const Projects = dynamic(() => import('@components/Projects'),{suspense:true})
 const AboutMe = dynamic(() => import('@components/AboutMe'),{suspense:true})
 const Home = () => {
