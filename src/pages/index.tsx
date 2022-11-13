@@ -14,7 +14,7 @@ const Home = () => {
  return (
   <>
    <NextSeo
-    title="aubin ishimwe"
+    title="aubinishimwe"
     description="my name is aubin ishimwe am a web developper and this is my personal portefolio and blog included"
     additionalLinkTags={[
      {

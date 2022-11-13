@@ -16,9 +16,11 @@ import { ColorModeContext } from '@pages/_app'
 import { GLobalButton } from '@utils/Button'
 import Link from './CustomLink'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 export function Header() {
  const [visibility, setVisibility] = useState<'none' | 'visible'>('none')
+ const route=useRouter()
  useEffect(() => {
   setVisibility('visible')
  }, [])
@@ -28,7 +30,7 @@ export function Header() {
   { number: '01', href: '#aboutMe', name: 'About', delay: '0ms' },
   { number: '02', href: '#projects', name: 'Projects', delay: '200ms' },
   { number: '03', href: '#contact', name: 'Contact', delay: '600ms' },
-  { number: '04', href: '#blog', name: 'Blog', delay: '400ms' },
+  { number: '04', href: '/blog', name: 'Blog', delay: '400ms' },
  ]
  const theme = useTheme()
  const [displayMenu, setDisplayMenu] = useState<Boolean>(false)
@@ -99,7 +101,7 @@ export function Header() {
        letterSpacing: '1px',
       }}
      >
-      {navListItems?.map((value, key) => (
+      {route?.pathname !== '/blog' && navListItems?.map((value, key) => (
        <ListItem
         key={key}
         disableGutters

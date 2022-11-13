@@ -5,7 +5,7 @@ import Box from '@mui/material/Box'
 function Footer() {
  return (
   <Box
-   sx={{ width: '100%', textAlign: 'center', padding: { md: '0 0 200px 0' } }}
+   sx={{ width: '100%', textAlign: 'center', padding: { md: '0 0 50px 0' } }}
   >
    <Typography
     variant="caption"
