@@ -8,9 +8,12 @@ import List from '@mui/material/List'
 import ListItem from '@mui/material/ListItem'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
-import useTheme from "@mui/material/styles/useTheme"
-import styled from "@mui/material/styles/styled"
+import useTheme from '@mui/material/styles/useTheme'
+import styled from '@mui/material/styles/styled'
 import ComponentTitle from '@utils/ComponentTitle'
+import {MdNavigation} from 'react-icons/md'
+
+
 import {
  AiFillLinkedin,
  AiOutlineInstagram,
@@ -167,19 +170,13 @@ function ContactMe() {
       sx={{
        width: '100%',
        display: 'flex',
-       position:"relative",
+       position: 'relative',
        flexDirection: 'column',
        justifyContent: 'space-between',
        alignItems: 'center',
       }}
      >
-      <Image
-       src="/contact.svg"
-       alt="pp"
-       width={250}
-       height={250}
-
-      />
+      <Image src="/contact.svg" alt="pp" width={250} height={250} />
       <Box
        sx={{
         width: '100%',
@@ -213,11 +210,12 @@ function ContactMe() {
              border: `1px solid  ${theme?.palette?.text?.primary}`,
             }}
             name="contact_button"
-            aria-label='contact-me'
+            aria-label="contact-me"
            >
             {value?.icon}
            </IconButton>
           ))}
+         
          </Stack>
         </ListItem>
        </List>

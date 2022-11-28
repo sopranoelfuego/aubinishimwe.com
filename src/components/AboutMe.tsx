@@ -110,7 +110,7 @@ function AboutMe() {
      </Typography>
      <Typography fontFamily="monospace" width="100%">
       So i decided to catch the basics(HTML,CSS,JAVASCRIPT) and attend coding
-      communities events, now i got a bachelor degree in software Engineer.
+      communities events, now i got a bachelor degree in software Engineer.<br/><span style={{ color: `${theme?.palette?.primary?.contrastText}`}}>TL;DR </span>
      </Typography>
 
      <Box>

@@ -8,6 +8,7 @@ import { afterLine } from '@utils'
 import SocialMedias from './SocialMedias'
 import Footer from '@components/Footer'
 
+
 export const Layout: React.FC = ({ children }: any) => {
  const theme = useTheme()
  const AfterLine = afterLine({ width: '1px', height: '200px' })
@@ -27,6 +28,7 @@ export const Layout: React.FC = ({ children }: any) => {
     }}
    >
     <Box sx={{ width: '100%' }}>
+
      <SocialMedias />
      <Box
       flexGrow={1}

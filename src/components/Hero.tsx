@@ -61,13 +61,13 @@ export function Hero() {
     I’m a software engineer ,based in Burundi. Currently work with new techs ,
     I’m focused on building accessible, human-centered products at{' '}
     <Link
-     href="http://bluetec.bi/"
+     href="https://www.africa2trust.com/Member/?l=1&c=4&sid=21861&glx=0&CatID=2"
      sx={{
       display: 'inline-flex',
       color: `${theme?.palette?.primary?.contrastText}`,
      }}
     >
-     Bluetec
+     ASYST Resources Ltd
     </Link>
    </Typography>
    <GLobalButton sx={{ marginTop: '20px' }} name="resume" aria-label="get-resume">
