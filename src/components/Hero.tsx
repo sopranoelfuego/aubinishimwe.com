@@ -55,7 +55,7 @@ export function Hero() {
     fontFamily="monospace"
     fontSize="clamp(30px, 8vw, 80px)"
    >
-    Web3 is my passion.
+    Web is my passion.
    </Typography>
    <Typography variant="body1" fontFamily="monospace" maxWidth="450px">
     I’m a software engineer ,based in Burundi. Currently work with new techs ,

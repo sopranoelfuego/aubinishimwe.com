@@ -32,7 +32,7 @@ function Projects() {
     maxWidth: '1000px',
    }}
   >
-   <ComponentTitle number="02." nameTitle="Projects" />
+   <ComponentTitle number="0.3" nameTitle="Projects" />
    <Grid container spacing={2} >
     {projects?.map((value, key) => (
      <SingleProject key={key} project={value} />

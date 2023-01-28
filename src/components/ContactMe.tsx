@@ -11,7 +11,6 @@ import Typography from '@mui/material/Typography'
 import useTheme from '@mui/material/styles/useTheme'
 import styled from '@mui/material/styles/styled'
 import ComponentTitle from '@utils/ComponentTitle'
-import {MdNavigation} from 'react-icons/md'
 
 
 import {
@@ -102,7 +101,7 @@ function ContactMe() {
    }}
    id="contact"
   >
-   <ComponentTitle number="03." nameTitle="Contact me" />
+   <ComponentTitle number="04." nameTitle="Contact me" />
 
    <Grid
     container

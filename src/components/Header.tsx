@@ -27,10 +27,11 @@ export function Header() {
 
  const colorMode = useContext(ColorModeContext)
  const navListItems = [
-  { number: '01', href: '#aboutMe', name: 'About', delay: '0ms' },
-  { number: '02', href: '#projects', name: 'Projects', delay: '200ms' },
-  { number: '03', href: '#contact', name: 'Contact', delay: '600ms' },
-  { number: '04', href: '/blog', name: 'Blog', delay: '400ms' },
+   { number: '01', href: '#aboutMe', name: 'About', delay: '0ms' },
+   { number: '02', href: '#experience', name: 'Experience', delay: '100ms' },
+   { number: '03', href: '#projects', name: 'Projects', delay: '200ms' },
+  { number: '04', href: '#contact', name: 'Contact', delay: '600ms' },
+  { number: '05', href: '/blog', name: 'Blog', delay: '400ms' },
  ]
  const theme = useTheme()
  const [displayMenu, setDisplayMenu] = useState<Boolean>(false)

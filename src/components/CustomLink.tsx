@@ -14,7 +14,7 @@ const Link: FC<LinkProps & HTMLProps<HTMLAnchorElement>> = ({
  const onClick = (event: MouseEvent<HTMLAnchorElement>) => {
   if (href.startsWith('#')) {
    event.preventDefault()
-   const destination = document.getElementById(href.substring(1))
+   const destination = document?.getElementById(href.substring(1))
    if (destination) destination.scrollIntoView({ behavior: 'smooth' })
   }
  }
