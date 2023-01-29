@@ -15,19 +15,20 @@ function Experience() {
   {
    key: '1',
    descr:
-    'Co-build ui interface with tech like react next and building rest and graphql apis in node and Nestjs',
+    'Co-build ui interface with tech like React, next and vanilla javascript ',
   },
   { key: '2', descr: 'Products deployement on clouds such as heroku and vercel ' },
+  { key: '2', descr: 'Working with various languages and technologies such as javascript ,typescript, React,node,nestjs graphql and content managments such as strapi' },
  ]
  const assystJobs = [
   {
    key: '1',
-   descr: 'Working on building user interfaces on diverse accounting softwares',
+   descr: 'Working on building user interfaces on various internal project with mordern tools ',
   },
   {
    key: '2',
    descr:
-    'Teamed with 3 developers we deliver scalable UIs in Reactjs and  JavaScript (ES6+)',
+    'Teamed with 3-6 developers we deliver scalable, performant and maintainable code in Reactjs with  JavaScript (ES6+)',
   },
  ]
 
