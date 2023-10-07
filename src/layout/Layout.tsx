@@ -14,10 +14,10 @@ export const Layout: React.FC = ({ children }: any) => {
  const AfterLine = afterLine({ width: '1px', height: '200px' })
 
  return (
-  <>
+  
    <Box
     sx={{
-     width: '100vw',
+     width: '100svw',
      margin: '0 auto',
      maxWidth: '2400px',
      padding: { xs: '20px', sm: '0 90px', md: '0 150px' },
@@ -81,6 +81,6 @@ export const Layout: React.FC = ({ children }: any) => {
      </Stack>
     </Box>
    </Box>
-  </>
+  
  )
 }
