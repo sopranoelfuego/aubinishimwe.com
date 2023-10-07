@@ -27,13 +27,19 @@ function Projects() {
    sx={{
     minHeight: '100vh',
     width: '100%',
+  
+    display:"flex",
+    flexDirection:"column",
+    justifyContent:"flex-start",
+    alignItems:"flex-start",
     margin: '0 auto',
     padding: { xs: '60px 0', sm: 'none' },
     maxWidth: '1000px',
    }}
   >
    <ComponentTitle number="02." nameTitle="Projects" />
-   <Grid container spacing={2} >
+    
+   <Grid container spacing={2}  sx={{width:"100%"}} justifyContent={{xs:"center",sm:"flex-start"}}>
     {projects?.map((value, key) => (
      <SingleProject key={key} project={value} />
     ))}

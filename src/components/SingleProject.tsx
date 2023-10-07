@@ -51,8 +51,9 @@ function SingleProject({ project }) {
    >
     <Image
      alt={project?.name}
-     height="250"
-     width="350"
+     height="300"
+     width="400"
+     layout="responsive"
      objectFit='fill'
      src={project?.image}
      
