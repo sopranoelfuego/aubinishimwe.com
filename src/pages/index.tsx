@@ -27,7 +27,7 @@ const Home = () => {
     twitter={{
      handle: '@aubinishimwe2',
      site: '@aubinishimwe2',
-     cardType: 'summary_large_image',
+     cardType: 'summary_large_image', 
     }}
    />
    <Box

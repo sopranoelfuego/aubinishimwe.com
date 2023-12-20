@@ -18,8 +18,8 @@ function AboutMe() {
  const matches = useMediaQuery(theme?.breakpoints?.down('sm'))
 
  const techList = [
-  { key: '1', name: 'typescript' },
-  { key: '2', name: 'JavaScript (ES6+)' },
+  { key: '1', name: 'Typescript' },
+  { key: '2', name: 'React Native' },
   { key: '3', name: 'React' },
   { key: '4', name: 'Nextjs' },
   { key: '5', name: 'Nodejs and Nestjs ' },

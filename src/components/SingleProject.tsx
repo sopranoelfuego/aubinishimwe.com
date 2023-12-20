@@ -7,12 +7,14 @@ import IconButton from "@mui/material/IconButton"
 import Typography from "@mui/material/Typography"
 import {useTheme} from "@mui/material/styles"
 import Image from 'next/image'
+import {  useRouter } from "next/router"
 import React, { useEffect, useState } from 'react'
 import { FiExternalLink, FiGithub } from 'react-icons/fi'
 
 function SingleProject({ project }) {
  const theme = useTheme()
  const [length, setLength] = useState<number>(100)
+ const router=useRouter()
 
  const [subDescription, setSubDescription] = useState<string>(project?.description?.substr(0,length))
  useEffect(() => {
@@ -27,9 +29,11 @@ function SingleProject({ project }) {
    md={6}
    lg={4}
 
+  //  columnSpacing={2}
    sx={{
-    maxWidth: 350,
+    maxWidth: {xs:"auto",sm:400},
     transition: 'transform 300ms ease-in',
+    display:"flex",
     width: '100%',
     boxShadow: `0 10px 20px -10px ${theme?.palette?.background?.default}`,
     '&:hover': {
@@ -44,6 +48,9 @@ function SingleProject({ project }) {
    <Card
     sx={{
      width: '100%',
+      padding:0,
+
+      margin:0,
      '&:hover > img': {
       filter: 'none',
      },
@@ -51,8 +58,8 @@ function SingleProject({ project }) {
    >
     <Image
      alt={project?.name}
-     height="300"
-     width="400"
+     height="100%"
+     width="100%"
      layout="responsive"
      objectFit='fill'
      src={project?.image}
@@ -90,10 +97,10 @@ function SingleProject({ project }) {
     <CardActions
      sx={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}
     >
-     <IconButton size="small" name="github_button" aria-label="gitub-product">
+     <IconButton size="small" name="github_button" aria-label="gitub-product" onClick={()=>router.push(`${project.gitRepos}`)}>
       <FiGithub />
      </IconButton>
-     <IconButton size="small" name="view_button" aria-label="view-button">
+     <IconButton size="small" name="view_button" aria-label="view-button" onClick={()=>router.push(`${project.link}`)}>
       <FiExternalLink />
      </IconButton>
     </CardActions>
