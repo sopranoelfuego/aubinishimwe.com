@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react'
 import Box from "@mui/material/Box"
 import Card from "@mui/material/Card"
 import CardActions from "@mui/material/CardActions"
@@ -5,10 +6,9 @@ import CardContent from "@mui/material/CardContent"
 import Grid from "@mui/material/Grid"
 import IconButton from "@mui/material/IconButton"
 import Typography from "@mui/material/Typography"
-import {useTheme} from "@mui/material/styles"
+import useTheme from "@mui/material/styles/useTheme"
 import Image from 'next/image'
 import {  useRouter } from "next/router"
-import React, { useEffect, useState } from 'react'
 import { FiExternalLink, FiGithub } from 'react-icons/fi'
 
 function SingleProject({ project }) {

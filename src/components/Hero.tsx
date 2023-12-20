@@ -3,7 +3,7 @@ import React from 'react'
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
 import Typography from '@mui/material/Typography'
-import { useTheme } from '@mui/material/styles'
+import useTheme from "@mui/material/styles/useTheme"
 import { GLobalButton } from '@utils/Button'
 
 export function Hero() {
@@ -55,19 +55,19 @@ export function Hero() {
     fontFamily="monospace"
     fontSize="clamp(30px, 8vw, 80px)"
    >
-    Web3 is my passion.
+    Web is my passion.
    </Typography>
    <Typography variant="body1" fontFamily="monospace" maxWidth="450px">
     I’m a software engineer ,based in Burundi. Currently work with new techs ,
     I’m focused on building accessible, human-centered products at{' '}
     <Link
-     href="http://bluetec.bi/"
+     href="https://www.africa2trust.com/Member/?l=1&c=4&sid=21861&glx=0&CatID=2"
      sx={{
       display: 'inline-flex',
       color: `${theme?.palette?.primary?.contrastText}`,
      }}
     >
-     Bluetec
+     ASYST Resources Ltd
     </Link>
    </Typography>
    <GLobalButton sx={{ marginTop: '20px' }} name="resume" aria-label="get-resume">

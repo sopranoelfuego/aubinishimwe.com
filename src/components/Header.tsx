@@ -7,7 +7,7 @@ import ListItem from '@mui/material/ListItem'
 import Stack from '@mui/material/Stack'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
-import {useTheme} from '@mui/material/styles'
+import useTheme from "@mui/material/styles/useTheme"
 
 import { BiMenuAltRight } from 'react-icons/bi'
 import { BsBrightnessHigh, BsBrightnessHighFill } from 'react-icons/bs'
@@ -16,19 +16,22 @@ import { ColorModeContext } from '@pages/_app'
 import { GLobalButton } from '@utils/Button'
 import Link from './CustomLink'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 export function Header() {
  const [visibility, setVisibility] = useState<'none' | 'visible'>('none')
+ const route=useRouter()
  useEffect(() => {
   setVisibility('visible')
  }, [])
 
  const colorMode = useContext(ColorModeContext)
  const navListItems = [
-  { number: '01', href: '#aboutMe', name: 'About', delay: '0ms' },
-  { number: '02', href: '#projects', name: 'Projects', delay: '200ms' },
-  { number: '03', href: '#contact', name: 'Contact', delay: '600ms' },
-  { number: '04', href: '#blog', name: 'Blog', delay: '400ms' },
+   { number: '01', href: '#aboutMe', name: 'About', delay: '0ms' },
+   { number: '02', href: '#experience', name: 'Experience', delay: '100ms' },
+   { number: '03', href: '#projects', name: 'Projects', delay: '200ms' },
+  { number: '04', href: '#contact', name: 'Contact', delay: '600ms' },
+  { number: '05', href: '/blog', name: 'Blog', delay: '400ms' },
  ]
  const theme = useTheme()
  const [displayMenu, setDisplayMenu] = useState<Boolean>(false)
@@ -39,6 +42,8 @@ export function Header() {
     position: 'fixed',
     top: 0,
     width: '100vw',
+    display:"flex",
+    alignItems:"center",
     height: { xs: '60px', sm: '100px' },
     fontFamily: 'monospace',
     boxShadow: `0 10px 30px -10px ${theme?.palette?.background?.default}`,
@@ -52,13 +57,14 @@ export function Header() {
     padding: { xs: '0 10px', sm: '0 10px', md: '0 50px' },
    }}
   >
-   <Container maxWidth="xl">
+   <Container maxWidth="xl" >
     <Toolbar
      disableGutters
      sx={{
       display: 'flex',
       justifyContent: 'space-between',
       position: 'relative',
+      margin:'auto 0'
      }}
     >
      <Link
@@ -68,8 +74,15 @@ export function Header() {
      >
       <Image src="/logo.png" width={32} height={32} alt="logo" />
      </Link>
-
-     <List
+     <Box sx={{display:"flex",alignItems:"center",gap:"20px"}}>
+     <IconButton onClick={colorMode.toggleColorMode} name="theme_button_toggle">
+        {theme?.palette?.mode ? (
+         <BsBrightnessHighFill fontSize="26px" />
+        ) : (
+         <BsBrightnessHigh fontSize="26px" />
+        )}
+       </IconButton>
+       <List
       sx={{
        width: 'auto',
        display: 'flex',
@@ -89,16 +102,7 @@ export function Header() {
        letterSpacing: '1px',
       }}
      >
-      <ListItem disableGutters>
-       <IconButton onClick={colorMode.toggleColorMode} name="theme_button_toggle">
-        {theme?.palette?.mode ? (
-         <BsBrightnessHighFill fontSize="26px" />
-        ) : (
-         <BsBrightnessHigh fontSize="26px" />
-        )}
-       </IconButton>
-      </ListItem>
-      {navListItems?.map((value, key) => (
+      {route?.pathname !== '/blog' && navListItems?.map((value, key) => (
        <ListItem
         key={key}
         disableGutters
@@ -124,11 +128,13 @@ export function Header() {
           <Stack direction="row" alignItems="center">
            <Typography
             variant="caption"
+            fontFamily="monospace"
             sx={{ color: `${theme?.palette?.primary?.contrastText}` }}
            >
             {value?.number}.
            </Typography>
-           <Typography variant="caption" display="inline-flex">
+            
+           <Typography variant="caption" fontFamily="monospace" display="inline-flex">
             {value?.name}
            </Typography>
           </Stack>
@@ -140,6 +146,8 @@ export function Header() {
        <GLobalButton name="resume" aria-label="resume">Resume</GLobalButton>
       </ListItem>
      </List>
+     </Box>
+     
 
      <Box sx={{ display: { xs: 'inline-block', md: 'none' } }}>
       <IconButton onClick={handleDisplayMenu} name="menuButton" aria-label="menu-drop-down">

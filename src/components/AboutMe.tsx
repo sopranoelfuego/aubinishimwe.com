@@ -4,7 +4,9 @@ import Stack from '@mui/material/Stack'
 import Box from '@mui/material/Box'
 import List from '@mui/material/List'
 import ListItem from '@mui/material/ListItem'
-import { styled, useTheme } from '@mui/material/styles'
+import useTheme from "@mui/material/styles/useTheme"
+import styled from "@mui/material/styles/styled"
+
 import Typography from '@mui/material/Typography'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import ComponentTitle from '@utils/ComponentTitle'
@@ -108,7 +110,7 @@ function AboutMe() {
      </Typography>
      <Typography fontFamily="monospace" width="100%">
       So i decided to catch the basics(HTML,CSS,JAVASCRIPT) and attend coding
-      communities events, now i got a bachelor degree in software Engineer.
+      communities events, now i got a bachelor degree in software Engineer.<br/><span style={{ color: `${theme?.palette?.primary?.contrastText}`}}>TL;DR </span>
      </Typography>
 
      <Box>
