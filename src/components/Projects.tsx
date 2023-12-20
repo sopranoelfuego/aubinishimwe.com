@@ -45,6 +45,7 @@ function Projects() {
  ]
  return (
   <Box
+  component="div"
    id="projects"
    sx={{
     minHeight: '100vh',
