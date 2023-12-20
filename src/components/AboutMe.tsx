@@ -65,6 +65,7 @@ function AboutMe() {
 
  return (
   <Box
+  component="div"
    sx={{
     minHeight: '100vh',
     width: '100%',

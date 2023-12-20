@@ -49,7 +49,7 @@ function SingleProject({ project }) {
     sx={{
      width: '100%',
       padding:0,
-
+      height:"auto",
       margin:0,
      '&:hover > img': {
       filter: 'none',
