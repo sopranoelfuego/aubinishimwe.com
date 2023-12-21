@@ -40,7 +40,7 @@ function SingleProject({ project }) {
      transform: 'translateY(-5px)',
     },
 
-    '&:hover  h5': {
+    '&:hover :first-child': {
      color: `${theme?.palette?.primary?.contrastText}`,
     },
    }}
@@ -68,10 +68,10 @@ function SingleProject({ project }) {
     <CardContent sx={{'&:hover':{cursor:"pointer"}}}>
      <Typography
       gutterBottom
-      variant="h5"
+      variant="inherit"
       color={`${theme?.palette?.text?.primary}`}
       fontFamily="monospace"
-      sx={{ transition: 'all  300ms ease-in' }}
+      sx={{ transition: 'all  300ms ease-in',fontSize:"1.5rem" }}
      >
       {project?.name}
      </Typography>

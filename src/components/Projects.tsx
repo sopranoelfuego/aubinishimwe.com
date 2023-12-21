@@ -9,7 +9,7 @@ function Projects() {
   {
     id:1,
    name: 'Personal template for Management Systems',
-   description: 'A personal Template for Systems build in next 14.',
+   description: 'A personal Template for Systems build in NextJS 14.',
    image: '/projects/UI_ADMIN.png',
    gitRepos: 'https://github.com/sopranoelfuego/test.git',
    link:"",
@@ -17,8 +17,8 @@ function Projects() {
   },
   {
     id:2,
-   name: 'Contributions,loans applications reimboursement Funds app',
-   description: 'A internal tool for contributions ,Loans applications and Reimboursement app which allow members to contribute and  take out a loans and reimbourse with interest in a given period of time.',
+   name: 'Contributions,loans applications and reimboursement Funds app',
+   description: 'A internal tool for contributions ,Loans applications and Reimboursement app which allow members to contribute and  take out loans and reimbourse them with interest in a given period of time.',
    image: '/projects/ziganya.png',
    link:"",
    gitRepos: '',
@@ -27,7 +27,7 @@ function Projects() {
   {
     id:3,
    name: 'Ult-Connect',
-   description: 'A social network application for the ult university, with 4 modules(multimedia publications,instant messaging,notifications system,admin panel) and 2 actors(students,admin)  ',
+   description: 'A social network application for the ULT university, with 4 modules(multimedia publications,instant messaging and notifications system), the project has both front and back office  ',
    image: '/projects/messenger_page.png',
    gitRepos: '',
    link:"",
@@ -36,7 +36,7 @@ function Projects() {
   {
     id:4,
    name: 'Education website',
-   description: 'A education website ui for praticing css cores stuffs like flexbox,grid,frame and much more,is a vanilla javascript project with pure html and css ',
+   description: 'A education website ui for practicing css cores stuffs like flexbox,grid,frame and much more,is a vanilla javascript project with pure html and css ',
    image: '/projects/educ.webp',
    gitRepos: 'https://github.com/sopranoelfuego/onlinecourses_ui.git',
    link:"https://studies0098.netlify.app/",

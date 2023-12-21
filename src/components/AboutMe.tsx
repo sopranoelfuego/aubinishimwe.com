@@ -92,7 +92,7 @@ function AboutMe() {
     >
      <Typography variant="body1" fontFamily="monospace">
       Hello again, My name is Aubin and I enjoy creating things that live on the
-      internet. My interest in coding stuffs started back in 2015 by watching my
+      internet and mobile. My interest in coding stuffs started back in 2016 by watching my
       childhood movie{' '}
       <Link
        href="https://fr.wikipedia.org/wiki/Matrix_(film)"
@@ -156,7 +156,7 @@ function AboutMe() {
      }}
     >
      <ImageContainer>
-      <Image src="/aubin.webp" layout="fill" alt="aubin"  sizes="(min-width:500px)500px,100vw"/>
+      <Image src="/aubin.webp" layout="fill" alt="aubin" priority={true}  sizes="(min-width:500px)500px,100vw"/>
      </ImageContainer>
     </Box>
    </Box>
