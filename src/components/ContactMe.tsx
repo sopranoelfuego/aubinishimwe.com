@@ -110,7 +110,7 @@ function ContactMe() {
     }}
    >
     <Grid item xs={12} md={6} display="flex" flexDirection="column" gap="20px">
-     <Typography variant="h5" fontWeight="700">
+     <Typography  sx={{fontSize:"2rem"}} fontWeight="700">
       Get In Touch
      </Typography>
      <Typography variant="body1">
@@ -156,7 +156,7 @@ function ContactMe() {
       multiline
       fullWidth
      />
-     <SendButton onClick={handlerSubmit} name="send" aria-label="send-contact">
+     <SendButton onClick={handlerSubmit} name="send" aria-label="send">
       send
      </SendButton>
     </Grid>
