@@ -156,7 +156,7 @@ function AboutMe() {
      }}
     >
      <ImageContainer>
-      <Image src="/aubin.webp" layout="fill" alt="aubin" priority={true} width={300} height={300}  />
+      <Image src="/aubin.webp" layout="fill" alt="aubin"  loading='lazy'   sizes="(min-width:500px)500px,100vw"/>
      </ImageContainer>
     </Box>
    </Box>
